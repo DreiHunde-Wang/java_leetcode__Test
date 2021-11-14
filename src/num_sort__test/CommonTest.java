@@ -12,7 +12,8 @@ public class CommonTest {
 //		int[] res = solution.chooseSort(nums);
 		
 //        int[] res = ChooseSortTest.chooseSort(nums);
-        int[] res = MergeSortTest.mergeSort(nums);
+//        int[] res = MergeSortTest.mergeSort(nums);
+        int[] res = QuickSortTest.quickSort(nums);
         
         System.out.println(Arrays.toString(res));
 
