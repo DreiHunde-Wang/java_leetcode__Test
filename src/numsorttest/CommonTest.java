@@ -1,4 +1,4 @@
-package num_sort__test;
+package numsorttest;
 
 import java.util.Arrays;
 
@@ -13,7 +13,8 @@ public class CommonTest {
 		
 //        int[] res = ChooseSortTest.chooseSort(nums);
 //        int[] res = MergeSortTest.mergeSort(nums);
-        int[] res = QuickSortTest.quickSort(nums);
+//        int[] res = QuickSortTest.quickSort(nums);
+        int[] res = HeapSortTest.heapSort(nums);
         
         System.out.println(Arrays.toString(res));
 

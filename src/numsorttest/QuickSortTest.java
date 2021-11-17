@@ -1,4 +1,4 @@
-package num_sort__test;
+package numsorttest;
 
 import java.util.Random;
 
@@ -22,7 +22,7 @@ public class QuickSortTest {
 		}
 		
 		int pIndex = partition(nums, left, right);
-		quickSortOrder(nums, 0, pIndex - 1);
+		quickSortOrder(nums, left, pIndex - 1);
 		quickSortOrder(nums, pIndex + 1, right);
 	}
 	

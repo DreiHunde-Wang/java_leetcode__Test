@@ -1,4 +1,4 @@
-package num_sort__test;
+package numsorttest;
 
 import java.util.Arrays;
 

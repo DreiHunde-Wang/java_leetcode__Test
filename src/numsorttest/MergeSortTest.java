@@ -1,4 +1,4 @@
-package num_sort__test;
+package numsorttest;
 
 public class MergeSortTest {
 	//¹é²¢ÅÅĞò

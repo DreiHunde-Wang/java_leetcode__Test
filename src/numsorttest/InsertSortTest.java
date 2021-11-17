@@ -1,4 +1,4 @@
-package num_sort__test;
+package numsorttest;
 
 public class InsertSortTest {
 	//插入排序：稳定排序，在接近有序的情况下，表现优异
