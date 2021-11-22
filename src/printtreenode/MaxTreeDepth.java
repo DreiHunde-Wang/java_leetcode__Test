@@ -19,7 +19,7 @@ public class MaxTreeDepth {
     }
 
     //method 2 µü´ú
-    public static int maxDepth(TreeNode root) {
+    public static int maxDepth2(TreeNode root) {
         if (root == null)
             return 0;
         Queue<TreeNode> queue = new LinkedList<>();
@@ -43,6 +43,23 @@ public class MaxTreeDepth {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		TreeNode root = new TreeNode(2);
+		root.left = new TreeNode(2);
+		root.right = new TreeNode(2);
+		root.left.left = new TreeNode(3);
+		root.left.right = new TreeNode(2);
+		root.right.left = new TreeNode(2);
+		root.right.right = new TreeNode(2);
+		
+		long startTime = System.nanoTime();
+		System.out.println(maxDepth1(root));
+		long endTime = System.nanoTime();
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
+		
+		startTime = System.nanoTime();
+		System.out.println(maxDepth2(root));
+		endTime = System.nanoTime();
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
 
 	}
 
