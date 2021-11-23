@@ -6,6 +6,11 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * 一组字符串组，求出不重复的字符串的最大长度乘积值
+ * @author Dreihunde
+ *
+ */
 public class MaxProduct {
 	private static Random random = new Random();
     public static int maxProduct(String[] words) {
