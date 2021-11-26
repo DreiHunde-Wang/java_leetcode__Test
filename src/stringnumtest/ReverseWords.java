@@ -93,7 +93,7 @@ public class ReverseWords {
         }
     }
     
-    //method3
+    //method3 双端队列
     public String reverseWords3(String s) {
         int left = 0, right = s.length() - 1;
         // 去掉字符串开头的空白字符
@@ -124,7 +124,56 @@ public class ReverseWords {
 
         return String.join(" ", d);
     }
+    
+    //method 4 双指针
+    public String reverseWords4(String s) {
+        s = s.trim();
+        int left = s.length() - 1;
+        int right = left;
+        StringBuffer sb = new StringBuffer();
 
+        while (left >= 0) {
+            //查询倒数第一个单词，遇到空格停止
+            while (left >= 0 && s.charAt(left) != ' ') {
+                left--;
+            }
+            //left指向单词左边的位置，right指向单词的最右字母
+            sb.append(s.substring(left + 1, right + 1) + " ");
+            //left跳过空格
+            while (left >= 0 && s.charAt(left) == ' ') {
+                left--;
+            }
+            //right重置为下一个单词的最右字母
+            right = left;
+        }
+        //去除append添加的最后一个空格
+        return sb.toString().trim();
+    }
+    
+    public static void main(String[] args) {
+		String s = "the sky is blue";
+		ReverseWords rw = new ReverseWords();
+		
+		long startTime=System.nanoTime(); 
+		System.out.println(rw.reverseWords1(s));
+		long endTime=System.nanoTime(); 
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
+		
+		startTime=System.nanoTime(); 
+		System.out.println(rw.reverseWords2(s));
+		endTime=System.nanoTime(); 
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
+		
+		startTime=System.nanoTime(); 
+		System.out.println(rw.reverseWords3(s));
+		endTime=System.nanoTime(); 
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
+		
+		startTime=System.nanoTime(); 
+		System.out.println(rw.reverseWords4(s));
+		endTime=System.nanoTime(); 
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
+	}
 
 
 }
