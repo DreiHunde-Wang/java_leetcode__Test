@@ -1,8 +1,10 @@
 eclipse.preferences.version=1
+encoding//src/dfsandbfs/StrExistInGrid.java=UTF-8
 encoding//src/dptest/JumpOrder.java=UTF-8
 encoding//src/dptest/TribonacciTest.java=UTF-8
 encoding//src/mathtest/PoorPig.java=UTF-8
 encoding//src/numsearch/HaveRepeatNumber.java=UTF-8
 encoding//src/numsorttest/NumReplace.java=UTF-8
+encoding//src/numsorttest/RandomFlipNum.java=UTF-8
 encoding//src/printtreenode/MergeTree.java=UTF-8
 encoding//src/stringnumtest/DecodeStr.java=UTF-8
