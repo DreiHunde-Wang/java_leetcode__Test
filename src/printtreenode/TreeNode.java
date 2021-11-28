@@ -1,6 +1,8 @@
 package printtreenode;
 
 import java.util.ArrayDeque;
+import java.util.HashSet;
+import java.util.Set;
 
 public class TreeNode {
 	public int val;
@@ -21,10 +23,16 @@ public class TreeNode {
 		}
 		
 		ArrayDeque<TreeNode> queue = new ArrayDeque<>();
+		Set<TreeNode> set = new HashSet<>();
 		queue.offer(root);
 		
 		while (!queue.isEmpty()) {
 			TreeNode t = queue.poll();
+			if (!set.contains(t)) {
+				set.add(t);
+			} else {
+				break;
+			}
 			System.out.print(t.val + " ");
 			if (t.left != null) 
 				queue.offer(t.left);

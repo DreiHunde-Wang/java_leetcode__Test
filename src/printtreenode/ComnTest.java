@@ -1,5 +1,8 @@
 package printtreenode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import printtreenode.PrintTreeUpToDown;
 
 public class ComnTest {
@@ -16,5 +19,23 @@ public class ComnTest {
 		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
 		
 	}
+	
+	public static void printListList(List<List<Integer>> list) {
+		for (int i = 0; i < list.size(); i++) {
+			for (int j = 0; j < list.get(i).size(); j++) {
+				System.out.print(list.get(i).get(j) + " ");
+			}
+		}
+		System.out.println();
+	}
+	
+	public static void printList(List<?> list) {
+		ArrayList<?> temp = new ArrayList<>(list);
+		for (int i = 0; i < temp.size(); i++) {
+			System.out.print(temp.get(i) + " ");
+		}
+		System.out.println();
+	}
+	
 
 }
