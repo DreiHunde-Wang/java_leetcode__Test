@@ -5,7 +5,8 @@ public class MergeSortTest {
 	/**
 	 * 列表大小小于等于该值时，优先使用插入排序
 	 */
-	private static final int INSERTION_SORT_THRESHOLD = 7;
+//	private static final int INSERTION_SORT_THRESHOLD = 7;
+	private static final int INSERTION_SORT_THRESHOLD = 0;
 
 	public static int[] mergeSort(int[] nums) {
 		int len = nums.length;
@@ -25,7 +26,7 @@ public class MergeSortTest {
 	private static void mergeSortOrder(int[] nums, int left, int right, int[] temp) {
 		//小区间使用插入排序
 		if(right - left <= INSERTION_SORT_THRESHOLD) {
-			InsertSortTest.insertSort(nums);
+//			InsertSortTest.insertSort(nums);
 			return;
 		}
 		int mid = (left + right) >>> 1;
@@ -48,33 +49,48 @@ public class MergeSortTest {
 	 * @param temp
 	 */
 	private static void mergeOfTwoSortedArray(int[] nums, int left, int mid, int right, int[] temp) {
-		System.arraycopy(nums, left, temp, mid, right - left + 1);
-		
-		int i = left;
-		int j = mid + 1;
-		
-		for(int k = left; k <= right; k++) {
-			if(i == mid + 1) {
-				nums[k] = temp[j];
-				j++;
-			} else if(j == right + 1) {
-				nums[k] = temp[i];
-				i++;
-			} else if(temp[i] <= temp[j]) {
-				// 注意写成 < 就丢失了稳定性（相同元素原来靠前的排序以后依然靠前）
-				nums[k] = temp[i];
+		int i = left;//左序列指针
+		int j = mid + 1;//右序列指针
+		int t = 0;//临时数组指针
+		while (i <= mid && j <= right) {
+			if (nums[i] <= nums[j]) {
+				temp[t] = nums[i];
 				i++;
 			} else {
-				// temp[i] > temp[j]
-				nums[k] = temp[j];
+				temp[t] = nums[j];
 				j++;
 			}
+			t++;
+		}
+		
+		//将左边剩余元素填入temp
+		while (i <= mid) {
+			temp[t] = nums[i];
+			i++;
+			t++;
+		}
+		//将右序列剩余元素填充进temp中
+		while (j <= right) {
+			temp[t] = nums[j];
+			t++;
+			j++;
+		}
+		t = 0;
+		//将temp中的元素全部拷贝到原数组中
+		while (left <= right) {
+			nums[left] = temp[t];
+			t++;
+			left++;
 		}
 	}
 	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int[] nums = new int[] {5, 3, 2, 1, 6, 7, 4, 9, 8};
+		CommonTest.printNum(nums);
+		mergeSort(nums);
+		CommonTest.printNum(nums);
 	}
 
 

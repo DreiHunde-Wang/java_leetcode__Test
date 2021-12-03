@@ -1,7 +1,9 @@
 package printtreenode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import printtreenode.PrintTreeUpToDown;
 
@@ -44,5 +46,18 @@ public class ComnTest {
 		System.out.println();
 	}
 	
+	public static void printTree(TreeNode root) {
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.offer(root);
+		
+		while (!queue.isEmpty()) {
+			TreeNode t = queue.poll();
+			System.out.print(t.val + " ");
+			if (t.left != null)
+				queue.add(t.left);
+			if (t.right != null)
+				queue.add(t.right);
+		}					
+	}
 
 }

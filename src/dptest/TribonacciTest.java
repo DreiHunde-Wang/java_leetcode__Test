@@ -45,7 +45,6 @@ public class TribonacciTest {
     }
     
     //method 3 快速幂
-  //method 2 快速幂
     public static int tribonacci3(int n) {
        if (n == 0) {
            return 0;
