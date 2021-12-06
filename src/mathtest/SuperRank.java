@@ -42,6 +42,19 @@ public class SuperRank {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int[] b = new int[] {1, 2};
+		int a = 2;
+		
+		SuperRank sr = new SuperRank();
+		long startTime = System.nanoTime();
+		System.out.println(sr.superPow1(a, b));
+		long endTime = System.nanoTime();
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
+				
+		startTime = System.nanoTime();
+		System.out.println(sr.superPow2(a, b));
+		endTime = System.nanoTime();
+		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
 
 	}
 

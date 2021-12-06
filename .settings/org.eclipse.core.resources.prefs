@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/classdesign/LRUCache.java=UTF-8
 encoding//src/dfsandbfs/StrExistInGrid.java=UTF-8
+encoding//src/dptest/ConstructMulNum.java=UTF-8
 encoding//src/dptest/JumpOrder.java=UTF-8
 encoding//src/dptest/TribonacciTest.java=UTF-8
 encoding//src/mathtest/PoorPig.java=UTF-8
