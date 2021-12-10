@@ -1,5 +1,6 @@
 package listtest;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -19,7 +20,8 @@ class MaxQueue {
 
     public MaxQueue() {
         valueQ = new LinkedList<>();
-        maxQ = new LinkedList<>();
+        maxQ = new ArrayDeque<>();
+//        maxQ = new LinkedList<>();
     }
     
     public int max_value() {
