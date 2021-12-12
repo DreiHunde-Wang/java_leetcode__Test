@@ -5,6 +5,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import printtreenode.ComnTest;
+
+/**
+ * 输入一个数组，打印出该数组中数字的所有排列。
+ * 你可以以任意顺序返回这个数组，但里面不能有重复元素。
+ * @author Dreihunde
+ *
+ */
 public class ReturnUniqueAllSort {
 	//method 1 溯回 api高手
     public List<List<Integer>> permuteUnique1(int[] nums) {
@@ -69,12 +77,12 @@ public class ReturnUniqueAllSort {
 		
 		ReturnUniqueAllSort rt = new ReturnUniqueAllSort();
     	long startTime=System.nanoTime(); 
-		System.out.println(rt.permuteUnique1(nums));
+		ComnTest.printListList(rt.permuteUnique1(nums));
 		long endTime=System.nanoTime(); 
 		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
 		
 		startTime=System.nanoTime(); 
-		System.out.println(rt.permuteUnique2(nums));
+		ComnTest.printListList(rt.permuteUnique2(nums));
 		endTime=System.nanoTime(); 
 		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
 

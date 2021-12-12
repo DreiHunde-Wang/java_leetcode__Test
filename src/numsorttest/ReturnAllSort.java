@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import mathtest.PoorPig;
+import printtreenode.ComnTest;
 
 /**
  * 给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。
@@ -44,7 +45,7 @@ public class ReturnAllSort {
 		
 		ReturnAllSort rt = new ReturnAllSort();
     	long startTime=System.nanoTime(); 
-		System.out.println(rt.permute(nums));
+		ComnTest.printListList(rt.permute(nums));
 		long endTime=System.nanoTime(); 
 		System.out.println("time cost:" + (endTime - startTime)/1000 + "ms");
 

@@ -47,6 +47,8 @@ public class ComnTest {
 	}
 	
 	public static void printTree(TreeNode root) {
+		if (root == null)
+			return;
 		Queue<TreeNode> queue = new LinkedList<>();
 		queue.offer(root);
 		
@@ -57,7 +59,8 @@ public class ComnTest {
 				queue.add(t.left);
 			if (t.right != null)
 				queue.add(t.right);
-		}					
+		}	
+		System.out.println();
 	}
 
 }
