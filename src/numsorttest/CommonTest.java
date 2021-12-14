@@ -37,6 +37,13 @@ public class CommonTest {
 		System.out.println();
 	}
 	
+	public static void printNum(double[] nums) {
+		for (double num : nums) {
+			System.out.print(num + " ");
+		}
+		System.out.println();
+	}
+	
 	public static void printNum(String[] nums) {
 		for (String num : nums) {
 			System.out.print(num + " ");
