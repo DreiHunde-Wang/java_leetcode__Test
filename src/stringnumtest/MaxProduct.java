@@ -7,7 +7,8 @@ import java.util.Map;
 import java.util.HashMap;
 
 /**
- * һ���ַ����飬������ظ����ַ�������󳤶ȳ˻�ֵ
+ * 给你一个字符串数组 words ，找出并返回 length(words[i]) * length(words[j]) 的最大值，
+ * 并且这两个单词不含有公共字母。如果不存在这样的两个单词，返回 0 。
  * @author Dreihunde
  *
  */
@@ -35,17 +36,16 @@ public class MaxProduct {
 
     }
 
-    private static boolean isHaveCommonCharacter(String str1, String str2) {
-        Set<Character> set = new HashSet<>();
-        for (int i = 0; i < str1.length(); i++) {
-            set.add(str1.charAt(i));
-        } 
-
-        for (int j = 0; j < str2.length(); j++) {
-            if(set.contains(str2.charAt(j)))
-                return true;
+    private static boolean isHaveCommonCharacter(String s, String p) {
+    	int[] mask = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            mask[s.charAt(i) - 'a']++;
         }
-
+        for (int i = 0; i < p.length(); i++) {
+            if (mask[p.charAt(i) - 'a'] > 0) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -113,7 +113,7 @@ public class MaxProduct {
     		int strLen = s.length();
     		for (int i = 0; i < strLen; i++) {
     			int temp = s.charAt(i) - 'a';
-    			mask[index] = (1 << temp);
+    			mask[index] |= (1 << temp);
     		}
     		index++;
     	}
@@ -130,9 +130,7 @@ public class MaxProduct {
     }
     
     public static int maxProduct3(String[] words) {
-    	int len = words.length;
     	Map<Integer, Integer> map = new HashMap<>();
-    	int index = 0;
     	
     	
     	for (String s: words) {
@@ -158,7 +156,7 @@ public class MaxProduct {
     }
     
     public static void main(String[] args) {
-		String[] words = new String[] {"aaaaa", "aa", "aaa", "aaaa"};
+		String[] words = new String[] {"abcdaa", "aa", "bbb", "aaaa"};
 		
 		long startTime=System.nanoTime(); 
 		System.out.println(maxProduct(words));
