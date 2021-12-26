@@ -4,9 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * ç»™ä½ ä¸€ä¸ªåŒ…å« n ä¸ªæ•´æ•°çš„æ•°ç»„Â numsï¼Œåˆ¤æ–­Â numsÂ ä¸­æ˜¯å¦å­˜åœ¨ä¸‰ä¸ªå…ƒç´  aï¼Œbï¼Œc ï¼Œä½¿å¾—Â a + b + c = 0 ï¼Ÿ
+ * è¯·ä½ æ‰¾å‡ºæ‰€æœ‰å’Œä¸º 0 ä¸”ä¸é‡å¤çš„ä¸‰å…ƒç»„ã€‚
+ * æ³¨æ„ï¼šç­”æ¡ˆä¸­ä¸å¯ä»¥åŒ…å«é‡å¤çš„ä¸‰å…ƒç»„ã€‚
+ * @author Dreihunde
+ *
+ */
 public class ThreeSumZero {
 	
-	//³¬Ê±
+	//è¶…æ—¶ O(n3) O(1)
     public static List<List<Integer>> threeSum1(int[] nums) {
          Arrays.sort(nums);
          int n = nums.length;
@@ -29,7 +36,7 @@ public class ThreeSumZero {
 
     }
 
-    //ÓÅ»¯
+    //method 2 åŒé‡éå†+äºŒåˆ†æŸ¥æ‰¾ O(n2logn) O(1)
     public static List<List<Integer>> threeSum2(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;
@@ -73,7 +80,8 @@ public class ThreeSumZero {
         return -1;
     }
     
-    public static List<List<Integer>> threeSum3(int[] nums) {// ×ÜÊ±¼ä¸´ÔÓ¶È£ºO(n^2)
+    //method 3 éå†+åŒæŒ‡é’ˆ O(n2) O(1)
+    public static List<List<Integer>> threeSum3(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         if (nums == null || nums.length <= 2) return ans;
 
@@ -81,9 +89,9 @@ public class ThreeSumZero {
 
         for (int i = 0; i < nums.length - 2; i++) { // O(n^2)
             if (nums[i] > 0) 
-            	break; // µÚÒ»¸öÊı´óÓÚ 0£¬ºóÃæµÄÊı¶¼±ÈËü´ó£¬¿Ï¶¨²»³ÉÁ¢ÁË
+            	break; // ç¬¬ä¸€ä¸ªæ•°å¤§äº 0ï¼Œåé¢çš„æ•°éƒ½æ¯”å®ƒå¤§ï¼Œè‚¯å®šä¸æˆç«‹äº†
             if (i > 0 && nums[i] == nums[i - 1]) 
-            	continue; // È¥µôÖØ¸´Çé¿ö
+            	continue; // å»æ‰é‡å¤æƒ…å†µ
             int target = -nums[i];
             int left = i + 1;
             int right = nums.length - 1;
@@ -91,8 +99,8 @@ public class ThreeSumZero {
                 if (nums[left] + nums[right] == target) {
                     ans.add(new ArrayList<>(Arrays.asList(nums[i], nums[left], nums[right])));
                     
-                    // ÏÖÔÚÒªÔö¼Ó left£¬¼õĞ¡ right£¬µ«ÊÇ²»ÄÜÖØ¸´£¬±ÈÈç: [-2, -1, -1, -1, 3, 3, 3], i = 0, left = 1, right = 6, [-2, -1, 3] µÄ´ğ°¸¼ÓÈëºó£¬ĞèÒªÅÅ³ıÖØ¸´µÄ -1 ºÍ 3
-                    left++; right--; // Ê×ÏÈÎŞÂÛÈçºÎÏÈÒª½øĞĞ¼Ó¼õ²Ù×÷
+                    // ç°åœ¨è¦å¢åŠ  leftï¼Œå‡å° rightï¼Œä½†æ˜¯ä¸èƒ½é‡å¤ï¼Œæ¯”å¦‚: [-2, -1, -1, -1, 3, 3, 3], i = 0, left = 1, right = 6, [-2, -1, 3] çš„ç­”æ¡ˆåŠ å…¥åï¼Œéœ€è¦æ’é™¤é‡å¤çš„ -1 å’Œ 3
+                    left++; right--; // é¦–å…ˆæ— è®ºå¦‚ä½•å…ˆè¦è¿›è¡ŒåŠ å‡æ“ä½œ
                     while (left < right && nums[left] == nums[left - 1]) left++;
                     while (left < right && nums[right] == nums[right + 1]) right--;
                 } else if (nums[left] + nums[right] < target) {
@@ -105,32 +113,32 @@ public class ThreeSumZero {
         return ans;
     }
     
-    //offical
+    //offical éå†+åŒæŒ‡é’ˆ O(n2) O(1)
     public static List<List<Integer>> threeSum4(int[] nums) {
         int n = nums.length;
         Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
-        // Ã¶¾Ù a
+        // æšä¸¾ a
         for (int first = 0; first < n; ++first) {
-            // ĞèÒªºÍÉÏÒ»´ÎÃ¶¾ÙµÄÊı²»ÏàÍ¬
+            // éœ€è¦å’Œä¸Šä¸€æ¬¡æšä¸¾çš„æ•°ä¸ç›¸åŒ
             if (first > 0 && nums[first] == nums[first - 1]) {
                 continue;
             }
-            // c ¶ÔÓ¦µÄÖ¸Õë³õÊ¼Ö¸ÏòÊı×éµÄ×îÓÒ¶Ë
+            // c å¯¹åº”çš„æŒ‡é’ˆåˆå§‹æŒ‡å‘æ•°ç»„çš„æœ€å³ç«¯
             int third = n - 1;
             int target = -nums[first];
-            // Ã¶¾Ù b
+            // æšä¸¾ b
             for (int second = first + 1; second < n; ++second) {
-                // ĞèÒªºÍÉÏÒ»´ÎÃ¶¾ÙµÄÊı²»ÏàÍ¬
+                // éœ€è¦å’Œä¸Šä¸€æ¬¡æšä¸¾çš„æ•°ä¸ç›¸åŒ
                 if (second > first + 1 && nums[second] == nums[second - 1]) {
                     continue;
                 }
-                // ĞèÒª±£Ö¤ b µÄÖ¸ÕëÔÚ c µÄÖ¸ÕëµÄ×ó²à
+                // éœ€è¦ä¿è¯ b çš„æŒ‡é’ˆåœ¨ c çš„æŒ‡é’ˆçš„å·¦ä¾§
                 while (second < third && nums[second] + nums[third] > target) {
                     --third;
                 }
-                // Èç¹ûÖ¸ÕëÖØºÏ£¬Ëæ×Å b ºóĞøµÄÔö¼Ó
-                // ¾Í²»»áÓĞÂú×ã a+b+c=0 ²¢ÇÒ b<c µÄ c ÁË£¬¿ÉÒÔÍË³öÑ­»·
+                // å¦‚æœæŒ‡é’ˆé‡åˆï¼Œéšç€ b åç»­çš„å¢åŠ 
+                // å°±ä¸ä¼šæœ‰æ»¡è¶³ a+b+c=0 å¹¶ä¸” b<c çš„ c äº†ï¼Œå¯ä»¥é€€å‡ºå¾ªç¯
                 if (second == third) {
                     break;
                 }
