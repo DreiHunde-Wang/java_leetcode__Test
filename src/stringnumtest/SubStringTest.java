@@ -1,5 +1,10 @@
 package stringnumtest;
 
+/**½Ø¶Ï×Ö·û
+ * 
+ * @author Dreihunde
+ *
+ */
 public class SubStringTest {
 	//method 1 ±éÀú O(n) O(1)
     public String truncateSentence1(String s, int k) {
