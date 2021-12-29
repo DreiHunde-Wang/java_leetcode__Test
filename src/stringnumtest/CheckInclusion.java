@@ -2,6 +2,12 @@ package stringnumtest;
 
 import java.util.Arrays;
 
+/**
+ * 给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的某个变位词。
+ * 换句话说，第一个字符串的排列之一是第二个字符串的 子串 。
+ * @author Dreihunde
+ *
+ */
 public class CheckInclusion {
 	//method 1 遍历 o(mn) O(C)
     public boolean checkInclusion1(String s1, String s2) {
