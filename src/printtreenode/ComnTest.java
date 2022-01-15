@@ -27,9 +27,22 @@ public class ComnTest {
 			for (int j = 0; j < list.get(i).size(); j++) {
 				System.out.print(list.get(i).get(j) + " ");
 			}
+			System.out.print("|| ");
 		}
 		System.out.println();
 	}
+	
+	public static void printStringList(List<List<String>> list) {
+		for (int i = 0; i < list.size(); i++) {
+			for (int j = 0; j < list.get(i).size(); j++) {
+				System.out.print(list.get(i).get(j) + " ");
+			}
+			System.out.print("|| ");
+		}
+		System.out.println();
+	}
+	
+
 	
 	public static void printList(List<?> list) {
 		ArrayList<?> temp = new ArrayList<>(list);

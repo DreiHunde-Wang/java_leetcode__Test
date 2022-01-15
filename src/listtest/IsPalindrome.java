@@ -1,5 +1,11 @@
 package listtest;
 
+/**
+ * 给定一个链表的 头节点 head ，请判断其是否为回文链表。
+ * 如果一个链表是回文，那么链表节点序列从前往后看和从后往前看是相同的。
+ * @author Dreihunde
+ *
+ */
 public class IsPalindrome {
 	public boolean isPalindrome(ListNode head) {
         ListNode tail = head;
