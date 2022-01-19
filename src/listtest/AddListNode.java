@@ -2,9 +2,15 @@ package listtest;
 
 import java.util.ArrayDeque;
 
-
+/**
+ * 给定两个 非空链表 l1和 l2 来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。
+ * 将这两数相加会返回一个新的链表。
+ * 可以假设除了数字 0 之外，这两个数字都不会以零开头。
+ * @author Dreihunde
+ *
+ */
 public class AddListNode {
-	//method 1 ��ת O(n) O(1)
+	//method 1 反转 O(n) O(1)
 	public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
         ListNode cur1 = reverse(l1);
         ListNode cur2 = reverse(l2);
@@ -48,7 +54,7 @@ public class AddListNode {
         return pre;
     }
     
-   //method 2 ջ O(n) O(n)
+   //method 2 栈 O(n) O(n)
     public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
         ListNode cur1 = l1;
         ListNode cur2 = l2;
