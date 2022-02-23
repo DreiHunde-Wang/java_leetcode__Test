@@ -6,7 +6,7 @@ package printtreenode;
  *
  */
 public class IsSubStructureTree {
-	//method 1 µÝ¹é
+	//method 1 µÝ¹é O(n) O(n)
     public static boolean isSubStructure(TreeNode A, TreeNode B) {
         if ((A == null) || (B == null))
             return false;
@@ -25,7 +25,7 @@ public class IsSubStructureTree {
         return isSameTree(A.left, B.left) && isSameTree(A.right, B.right);
     }
     
-    //method 2 µü´ú
+    //method 2 µü´ú O(n) O(n)
     
     public static void main(String[] args) {
 		//[1,2,2,3,4,4,3]

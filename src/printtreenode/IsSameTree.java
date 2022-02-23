@@ -9,7 +9,7 @@ import java.util.Queue;
  *
  */
 public class IsSameTree {
-	//method 1 µÝ¹é
+	//method 1 µÝ¹é O(n) O(n)
     public static boolean isSameTree1(TreeNode p, TreeNode q) {
         if (p == null && q == null)
             return true;
@@ -19,7 +19,7 @@ public class IsSameTree {
             return isSameTree1(p.left, q.left) && isSameTree1(p.right, q.right);
     }
 
-    //method 2 µü´ú
+    //method 2 µü´ú O(n) O(n)
     public static boolean isSameTree2(TreeNode p, TreeNode q) {
         if (p == null && q == null)
             return true;
