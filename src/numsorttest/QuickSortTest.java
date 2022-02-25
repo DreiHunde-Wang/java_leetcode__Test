@@ -42,7 +42,7 @@ public class QuickSortTest {
 				lt++;
 			}
 			while(gt > left && nums[gt] > pivot) {
-				gt++;
+				gt--;
 			}
 			
 			if(lt >= gt)
