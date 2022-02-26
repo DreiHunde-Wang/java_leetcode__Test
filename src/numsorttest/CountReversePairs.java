@@ -11,7 +11,7 @@ import java.util.TreeSet;
  *
  */
 public class CountReversePairs {
-	//method 1 暴力(超时) O(n2) O(1)
+	//method 1 暴力(超时) O(n^2) O(1)
     public int reversePairs1(int[] nums) {
         int n = nums.length;
         if (n == 0) {
