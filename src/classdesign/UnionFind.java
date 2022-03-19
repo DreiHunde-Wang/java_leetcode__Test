@@ -22,11 +22,11 @@ public class UnionFind {
 		return this.count;
 	}
 		
-	public int find(int p) {
-		while (p != id[p]) {
-			id[p] = find(id[p]);
+	public int find(int i) {
+		if (i == id[i]) {
+			return i;
 		}
-		return id[p];
+		return id[i] = find(id[i]);
 	}
 		
 	public void union(int p, int q) {
