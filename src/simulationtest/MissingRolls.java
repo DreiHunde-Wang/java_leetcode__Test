@@ -14,7 +14,8 @@ import java.util.Arrays;
  * @author Dreihunde
  *
  */
-public class MissingRolls {//method 1 模拟 O(n) O(1)
+public class MissingRolls {
+	//method 1 模拟 O(n) O(1)
     public int[] missingRolls(int[] rolls, int mean, int n) {
         int m = rolls.length;
         //总共的观测值
