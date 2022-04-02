@@ -4,17 +4,17 @@ import java.util.Random;
 
 public class QuickSortTest {
 	
-	private static final int INSERTION_SORT_THRESHOLD = 7;
+	private static final int INSERTION_SORT_THRESHOLD = 0;
 	
-	private static final Random RANDOM = new Random();
+	private final Random RANDOM = new Random();
 	
-	public static int[] quickSort(int[] nums) {
+	public int[] quickSort(int[] nums) {
 		int len = nums.length;
 		quickSortOrder(nums, 0, len - 1);
 		return nums;
 	}
 	
-	private static void quickSortOrder(int[] nums, int left, int right) {
+	private void quickSortOrder(int[] nums, int left, int right) {
 		//小区间使用插入排序
 		if(right - left <= INSERTION_SORT_THRESHOLD) {
 			InsertSortTest.insertSort(nums);
@@ -26,7 +26,7 @@ public class QuickSortTest {
 		quickSortOrder(nums, pIndex + 1, right);
 	}
 	
-	private static int partition(int[] nums, int left, int right) {
+	private int partition(int[] nums, int left, int right) {
 		int randomIndex = left + RANDOM.nextInt(right - left + 1);
 		swap(nums, left, randomIndex);
 		
@@ -42,7 +42,7 @@ public class QuickSortTest {
 				lt++;
 			}
 			while(gt > left && nums[gt] > pivot) {
-				gt++;
+				gt--;
 			}
 			
 			if(lt >= gt)
@@ -61,5 +61,14 @@ public class QuickSortTest {
 		nums[i] = nums[j];
 		nums[j] = temp;
 	}
-
+	
+	public static void main(String[] args) {
+//		int[] nums = new int[] {0,1,2,1};
+		int[] nums = new int[] {3,2,1};
+		QuickSortTest qs = new QuickSortTest();
+		nums = qs.quickSort(nums);
+		for (int num : nums) {
+			System.out.print(num + " ");
+		}
+	}
 }
