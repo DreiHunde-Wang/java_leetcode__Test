@@ -1,3 +1,6 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=refs/remotes/origin/master
 eclipse.preferences.version=1
 encoding//src/binaryandtest/ValidUTF8.java=UTF-8
 encoding//src/classdesign/DetectSquares.java=UTF-8
@@ -49,6 +52,7 @@ encoding//src/mathtest/PoorPig.java=UTF-8
 encoding//src/mathtest/StoneGame.java=UTF-8
 encoding//src/mathtest/SuperRank.java=UTF-8
 encoding//src/numsearch/BusiestServer.java=UTF-8
+encoding//src/numsearch/Divide.java=UTF-8
 encoding//src/numsearch/FindIncreasingSub.java=UTF-8
 encoding//src/numsearch/FindKSmallFraction.java=UTF-8
 encoding//src/numsearch/FindMedianSortedArrays.java=UTF-8
@@ -83,11 +87,8 @@ encoding//src/printtreenode/Trie.java=UTF-8
 encoding//src/simulationtest/Bank.java=UTF-8
 encoding//src/simulationtest/FindRestaurant.java=UTF-8
 encoding//src/simulationtest/GridIllumination.java=UTF-8
-<<<<<<< HEAD
-encoding//src/simulationtest/StrongPasswordChecker.java=UTF-8
-=======
 encoding//src/simulationtest/MissingRolls.java=UTF-8
->>>>>>> refs/remotes/origin/master
+encoding//src/simulationtest/StrongPasswordChecker.java=UTF-8
 encoding//src/slidewindowtest/FindAnagram.java=UTF-8
 encoding//src/slidewindowtest/MaxConsecutiveAnswers.java=UTF-8
 encoding//src/slidewindowtest/MaxSumOfThreeSub.java=UTF-8
