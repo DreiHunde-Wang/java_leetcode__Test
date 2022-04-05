@@ -2,6 +2,7 @@
 <<<<<<<=HEAD
 >>>>>>>=refs/remotes/origin/master
 eclipse.preferences.version=1
+encoding//src/binaryandtest/CountPrimeSetBits.java=UTF-8
 encoding//src/binaryandtest/ValidUTF8.java=UTF-8
 encoding//src/classdesign/DetectSquares.java=UTF-8
 encoding//src/classdesign/LRUCache.java=UTF-8
