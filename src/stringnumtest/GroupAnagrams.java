@@ -5,67 +5,74 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import printtreenode.ComnTest;
 
 /**
  * 给定一个字符串数组 strs ，将 变位词 组合在一起。 可以按任意顺序返回结果列表。
  * 注意：若两个字符串中每个字符出现的次数都相同，则称它们互为变位词。
+ * https://leetcode-cn.com/problems/group-anagrams/
  * @author Dreihunde
  *
  */
 public class GroupAnagrams {
-	//hash + map映射 O(nm) O(n)
-    int[] hashCode = new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
+	//method 1 自定义hash O(nk) O(nk)
+    public static long[] primes = new long[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101};
     public List<List<String>> groupAnagrams1(String[] strs) {
+        Map<Long, List<String>> map = new HashMap<>();
         List<List<String>> ans = new ArrayList<>();
-        Map<Long, Integer> map = new HashMap<>();
-        for (String str: strs) {
-            long curHash = getHash(str);
-            if (map.containsKey(curHash)) {
-                int idx = map.get(curHash);
-                ans.get(idx).add(str);
-            } else {
-                List<String> list = new ArrayList<>();
-                list.add(str);
-                ans.add(list);
-                map.put(curHash, ans.size() - 1);
+        for (String str : strs) {
+            long ret = strToInt(str);
+            if (!map.containsKey(ret)) {
+                List<String> temp = new ArrayList<>();
+                map.put(ret, temp);
             }
+            map.get(ret).add(str);
+        }
+        for (Map.Entry<Long, List<String>> entry : map.entrySet()) {
+            ans.add(entry.getValue());
         }
         return ans;
     }
 
-    private long getHash(String str) {
-        if (str.length() == 0) {
-            return 0;
+
+    public long strToInt(String str) {
+        long ret = 1L;
+        long ret2 = 0L;
+        for (int i = 0; i < str.length(); i++) {
+            int idx = str.charAt(i) - 'a';
+            ret *= primes[idx];
+            ret2 += 1 << primes[idx];
         }
-        int m = str.length();
-        //hash值
-        long needleHash = 1;
-        for (int i = 0; i < m; i++) {
-            needleHash *= hashCode[str.charAt(i) - 'a'];
-        }
-        return needleHash;
+        return ret ^ ret2;
     }
 
-    //method 2 先排序，在比较 O(nm(1 + logm)) O(nm)
+
+    //method 2 排序哈希 O(nklogk) O(nk)
     public List<List<String>> groupAnagrams2(String[] strs) {
-        List<List<String>> ans = new ArrayList<>();
-        Map<String, Integer> map = new HashMap<>();
-        for (String str: strs) {
-            char[] arr = str.toCharArray();
-            Arrays.sort(arr);
-            if (map.containsKey(new String(arr))) {
-                int idx = map.get(new String(arr));
-                ans.get(idx).add(str);
-            } else {
-                List<String> list = new ArrayList<>();
-                list.add(str);
-                ans.add(list);
-                map.put(new String(arr), ans.size() - 1);
-            }
+        Map<String, List<String>> map = new HashMap<String, List<String>>();
+        for (String str : strs) {
+            char[] array = str.toCharArray();
+            Arrays.sort(array);
+            String key = new String(array);
+            List<String> list = map.getOrDefault(key, new ArrayList<String>());
+            list.add(str);
+            map.put(key, list);
         }
-        return ans;
+        return new ArrayList<List<String>>(map.values());
+    }
+
+    //method 3 stream流  O(nk) O(nk)
+    public List<List<String>> groupAnagrams3(String[] strs) {
+        return new ArrayList<>(Arrays.stream(strs)
+            .collect(Collectors.groupingBy(str -> {
+                // 返回 str 排序后的结果。
+                // 按排序后的结果来grouping by，算子类似于 sql 里的 group by。
+                char[] array = str.toCharArray();
+                Arrays.sort(array);
+                return new String(array);
+            })).values());
     }
 
 	public static void main(String[] args) {
