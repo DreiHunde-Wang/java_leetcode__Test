@@ -1,8 +1,8 @@
-package mathtest;
+package src.mathtest;
 
 /**
- * 对于一个 正整数，如果它和除了它自身以外的所有 正因子 之和相等，我们称它为 「完美数」。
- * 给定一个 整数 n， 如果是完美数，返回 true，否则返回 false
+ * 对于�?个 正整数，如果它和除了它自身以外的所�? 正因�? 之和相等，我们称它为 「完美数」�??
+ * 给定�?个 整数 n， 如果是完美数，返回 true，否则返�? false
  * 1 <= num <= 10^8
  * @author Dreihunde
  *
@@ -22,7 +22,7 @@ public class IsPerfectNum {
         return sum == num;
     }
 
-    //method 2 数学 O(1) O(1) 完美数满足2^(p - 1) * (2^p - 1) p为质数且 2^p-1也为素数
+    //method 2 数学 O(1) O(1) 完美数满�?2^(p - 1) * (2^p - 1) p为质数且 2^p-1也为素数
     public boolean checkPerfectNumber2(int num) {
         return num == 6 || num == 28 || num == 496 || num == 8128 || num == 33550336;
     }

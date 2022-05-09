@@ -1,4 +1,4 @@
-package numsorttest;
+package src.numsorttest;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

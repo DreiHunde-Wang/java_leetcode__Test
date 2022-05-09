@@ -1,9 +1,9 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**
- * 实现 strStr() 函数。
- * 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串出现的第一个位置（下标从 0 开始）。
- * 如果不存在，则返回  -1 。
+ * 实现 strStr() 函数�?
+ * 给你两个字符串 haystack �? needle ，请你在 haystack 字符串中找出 needle 字符串出现的第一个位置（下标�? 0 �?始）�?
+ * 如果不存在，则返回�? -1 �?
  * @author Dreihunde
  *
  */
@@ -55,11 +55,11 @@ public class StrStr {
         //26个字母，增大减少重复
         int base = 31;
         long power = 1;
-        //得到最高位要乘的值
+        //得到�?高位要乘的�??
         for (int i = 0; i < m; i++) {
             power = (power * base) % Mod;
         }
-        //needle的hash值
+        //needle的hash�?
         long needleHash = 0;
         for (int i = 0; i < m; i++) {
             needleHash = (needleHash * base + (needle.charAt(i) - 'a')) % Mod;

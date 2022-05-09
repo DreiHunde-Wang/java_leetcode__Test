@@ -1,4 +1,4 @@
-package numsorttest;
+package src.numsorttest;
 
 public class MergeNums {
 	//method 1 正序遍历合并 O(m + n) O(m + n)

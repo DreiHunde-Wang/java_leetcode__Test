@@ -1,13 +1,13 @@
-package numsorttest;
+package src.numsorttest;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 给你一个整数数组 nums 和一个整数 k ，请你返回数对 (i, j) 的数目，满足 i < j 且 |nums[i] - nums[j]| == k 。
- * |x| 的值定义为：
- * 如果 x >= 0 ，那么值为 x 。
- * 如果 x < 0 ，那么值为 -x 。
+ * 给你�?个整数数组 nums 和一个整数 k ，请你返回数对�?(i, j) 的数目，满足 i < j 且 |nums[i] - nums[j]| == k �?
+ * |x| 的�?�定义为�?
+ * 如果 x >= 0 ，那么�?�为 x �?
+ * 如果 x < 0 ，那么�?�为 -x �?
  * 链接：https://leetcode-cn.com/problems/count-number-of-pairs-with-absolute-difference-k
  * @author 1
  *
@@ -27,7 +27,7 @@ public class TwoNumDiff {
         return count;
     }
 
-    //method 2 哈希表 O(n) O(n)
+    //method 2 哈希�? O(n) O(n)
     public int countKDifference2(int[] nums, int k) {
         int n = nums.length;
         int count = 0;
@@ -39,12 +39,12 @@ public class TwoNumDiff {
         return count;
     }
 
-    //method 3 桶排序查找 O(n) O(C) C = 100
+    //method 3 桶排序查�? O(n) O(C) C = 100
     public int countKDifference(int[] nums, int k) {
         int n = nums.length;
         int[] nums_count = new int[100];
         int count = 0;
-        //将nums数组中的数插入桶排序中
+        //将nums数组中的数插入桶排序�?
         for (int num : nums) {
             nums_count[num - 1]++;
         }

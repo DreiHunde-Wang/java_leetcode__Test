@@ -1,4 +1,4 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**
  * 给你一个字符串 s ，根据下述规则反转字符串：

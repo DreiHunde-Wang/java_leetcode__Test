@@ -1,4 +1,4 @@
-package classdesign;
+package src.classdesign;
 
 import java.util.ArrayList;
 

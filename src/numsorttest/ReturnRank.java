@@ -1,4 +1,4 @@
-package numsorttest;
+package src.numsorttest;
 
 import java.net.Socket;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-import printtreenode.TreeNode;
+import src.printtreenode.TreeNode;
 
 /**
  * 给你一个长度为 n 的整数数组 score ，其中 score[i] 是第 i 位运动员在比赛中的得分。所有得分都 互不相同 。

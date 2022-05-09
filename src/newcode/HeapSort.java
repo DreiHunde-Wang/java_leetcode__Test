@@ -1,4 +1,4 @@
-package newcode;
+package src.newcode;
 
 public class HeapSort {
 	public int[] MySort (int[] arr) {

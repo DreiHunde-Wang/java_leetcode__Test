@@ -1,4 +1,4 @@
-package dfsandbfs;
+package src.dfsandbfs;
 
 public class ComputeLandArea {
 	public static int maxAreaOfIsland(int[][] grid) {

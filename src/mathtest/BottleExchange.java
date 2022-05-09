@@ -1,4 +1,4 @@
-package mathtest;
+package src.mathtest;
 
 /**
  * 小区便利店正在促销，用 numExchange 个空酒瓶可以兑换一瓶新酒。你购入了 numBottles 瓶酒。

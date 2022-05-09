@@ -1,10 +1,10 @@
-package slidewindowtest;
+package src.slidewindowtest;
 
-import numsorttest.CommonTest;
+import src.numsorttest.CommonTest;
 
 /**
- * 给你一个整数数组 nums 和一个整数 k ，找出三个长度为 k 、互不重叠、且 3 * k 项的和最大的子数组，并返回这三个子数组。
- * 以下标的数组形式返回结果，数组中的每一项分别指示每个子数组的起始位置（下标从 0 开始）。如果有多个结果，返回字典序最小的一个。
+ * 给你�?个整数数�? nums 和一个整�? k ，找出三个长度为 k 、互不重叠�?�且 3 * k 项的和最大的子数组，并返回这三个子数组�??
+ * 以下标的数组形式返回结果，数组中的每�?项分别指示每个子数组的起始位置（下标�? 0 �?始）。如果有多个结果，返回字典序�?小的�?个�??
  * @author Dreihunde
  *
  */
@@ -23,20 +23,20 @@ public class MaxSumOfThreeSub {
             sum2 += nums[i - k];
             sum3 += nums[i];
 
-            //新输入k个值之后更新
+            //新输入k个�?�之后更�?
             if (i >= k * 3 - 1) {
-                //窗口一比较
+                //窗口�?比较
                 if (sum1 > maxSum1) {
                     maxSum1 = sum1;
                     maxSum1Idx = i - k * 3 + 1;
                 }
-                //窗口一与窗口二的最大值比较
+                //窗口�?与窗口二的最大�?�比�?
                 if (maxSum1 + sum2 > maxSum12) {
                     maxSum12 = maxSum1 + sum2;
                     maxSum2Idx1 = maxSum1Idx;
                     maxSum2Idx2 = i - k * 2 + 1;
                 }
-                //窗口一，二，三的最大值比较
+                //窗口�?，二，三的最大�?�比�?
                 if (maxSum12 + sum3 > maxSumTotal) {
                     maxSumTotal = maxSum12 + sum3;
                     //每次比较完更新答案，避免重复
@@ -54,7 +54,7 @@ public class MaxSumOfThreeSub {
         return ans;
     }
     
-    //method 2 两个不重叠窗口的最大和
+    //method 2 两个不重叠窗口的�?大和
     public int[] maxSumOfTwoSubarrays(int[] nums, int k) {
     	int[] ans = new int[2];
     	int sum1 = 0, maxSum1 = 0, maxSum1Idx = 0;
@@ -82,7 +82,7 @@ public class MaxSumOfThreeSub {
     	return ans;
     }
     
-  //method 3 一个窗口的最大和
+  //method 3 �?个窗口的�?大和
     public int[] maxSumOfSubarrays(int[] nums, int k) {
     	int[] ans = new int[1];
     	int sum = 0, maxSum = 0;

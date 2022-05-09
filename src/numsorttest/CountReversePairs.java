@@ -1,4 +1,4 @@
-package numsorttest;
+package src.numsorttest;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package numsearch;
+package src.numsearch;
 
 public class FindRepeatNumber {
 	 //method1

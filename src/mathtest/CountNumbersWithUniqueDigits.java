@@ -1,4 +1,4 @@
-package mathtest;
+package src.mathtest;
 
 /**
  * 给你一个整数 n ，统计并返回各位数字都不同的数字 x 的个数，其中 0 <= x < 10^n 。

@@ -1,4 +1,4 @@
-package numsorttest;
+package src.numsorttest;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
- * 给你一个整数数组 nums 和一个整数 k ，按以下方法修改该数组：
- * 选择某个下标 i 并将 nums[i] 替换为 -nums[i] 。
- * 重复这个过程恰好 k 次。可以多次选择同一个下标 i 。
- * 以这种方式修改数组后，返回数组 可能的最大和 。
+ * 给你�?个整数数�? nums 和一个整�? k ，按以下方法修改该数组：
+ * 选择某个下标 i 并将 nums[i] 替换�? -nums[i] �?
+ * 重复这个过程恰好 k 次�?�可以多次�?�择同一个下�? i �?
+ * 以这种方式修改数组后，返回数�? 可能的最大和 �?
  * @author Dreihunde
  *
  */
@@ -26,7 +26,7 @@ public class ReturnKRevSum {
         for (int i = -100; i < 0; i++) {
             if (freq.containsKey(i)) {
                 int ops = Math.min(k, freq.get(i));
-                //负数变正数，相当于加了双倍
+                //负数变正数，相当于加了双�?
                 ans += (-i) * ops * 2;
                 freq.put(i, freq.get(i) - ops);
                 freq.put(-i, freq.getOrDefault(-i, 0) + ops);
@@ -47,7 +47,7 @@ public class ReturnKRevSum {
         return ans;
     }
 
-    //method 2 桶排序 O(n + C) O(C)
+    //method 2 桶排�? O(n + C) O(C)
     public int largestSumAfterKNegations2(int[] nums, int k) {
         int[] bucket = new int[201];
         for (int n : nums) {
@@ -77,10 +77,10 @@ public class ReturnKRevSum {
     public int largestSumAfterKNegations3(int[] nums, int k) {
         //递增排序
         PriorityQueue<Integer> heap = new PriorityQueue<>((a, b) -> (nums[a] - nums[b]));
-        //是否有0
+        //是否�?0
         boolean zero = false;
         int n = nums.length;
-        //绝对值最小值的坐标
+        //绝对值最小�?�的坐标
         int minIdx = 0;
         for (int i = 0; i < n; i++) {
             if (nums[i] < 0)    heap.offer(i);

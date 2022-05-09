@@ -1,11 +1,11 @@
-package slidewindowtest;
+package src.slidewindowtest;
 
 import java.util.Comparator;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
-import numsorttest.CommonTest;
+import src.numsorttest.CommonTest;
 
 /**
  * 给定一个数组 nums 和滑动窗口的大小 k，请找出所有滑动窗口里的最大值。

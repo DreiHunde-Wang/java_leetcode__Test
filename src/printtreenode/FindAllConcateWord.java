@@ -1,10 +1,10 @@
-package printtreenode;
+package src.printtreenode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import numsorttest.CommonTest;
-import printtreenode.Trie;
+import src.numsorttest.CommonTest;
+import src.printtreenode.Trie;
 
 /**
  * 给你一个 不含重复 单词的字符串数组 words ，请你找出并返回 words 中的所有 连接词 。

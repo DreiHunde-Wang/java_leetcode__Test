@@ -1,4 +1,4 @@
-package listtest;
+package src.listtest;
 
 public class PrintListNode {
 	

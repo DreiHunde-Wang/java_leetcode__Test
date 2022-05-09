@@ -1,16 +1,16 @@
-package dptest;
+package src.dptest;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 在一个 n x n 的国际象棋棋盘上，一个骑士从单元格 (row, column) 开始，并尝试进行 k 次移动。
- * 行和列是 从 0 开始 的，所以左上单元格是 (0,0) ，右下单元格是 (n - 1, n - 1) 。
- * 象棋骑士有8种可能的走法，如下图所示。每次移动在基本方向上是两个单元格，然后在正交方向上是一个单元格。
+ * 在一个 n x n 的国际象棋棋盘上，一个骑士从单元�? (row, column) �?始，并尝试进�? k 次移动�??
+ * 行和列是 �? 0 �?�? 的，�?以左上单元格�? (0,0) ，右下单元格�? (n - 1, n - 1) �?
+ * 象棋骑士�?8种可能的走法，如下图�?示�?�每次移动在基本方向上是两个单元格，然后在正交方向上是一个单元格�?
  * col+-1 and row +-2 or col +-2 and row +-1
- * 每次骑士要移动时，它都会随机从8种可能的移动中选择一种(即使棋子会离开棋盘)，然后移动到那里。
- * 骑士继续移动，直到它走了 k 步或离开了棋盘。
- * 返回 骑士在棋盘停止移动后仍留在棋盘上的概率 。
+ * 每次骑士要移动时，它都会随机�?8种可能的移动中�?�择�?�?(即使棋子会离�?棋盘)，然后移动到那里�?
+ * 骑士继续移动，直到它走了 k 步或离开了棋盘�??
+ * 返回 骑士在棋盘停止移动后仍留在棋盘上的概�? �?
  * 链接：https://leetcode-cn.com/problems/knight-probability-in-chessboard
  * @author Dreihunde
  *
@@ -64,23 +64,23 @@ class SolutionKP1 {
   }
 }
 
-//method 2 记忆化搜索 O(k*n^2) O(k*n^2)
+//method 2 记忆化搜�? O(k*n^2) O(k*n^2)
 class SolutionKP2 {
 
   private static final int[][] DIRS = {{1, 2}, {2, 1}, {-1, 2}, {2, -1}, {1, -2}, {-2, 1}, {-1, -2}, {-2, -1}};
 
   public double knightProbability(int n, int k, int row, int column) {
-      // 记忆化搜索
+      // 记忆化搜�?
       double[][][] memo = new double[n][n][k + 1];
       return dfs(n, k, row, column, memo);
   }
 
   public double dfs(int n, int k, int i, int j, double[][][] memo) {
-      // 走出边界了，这条路不通，概率为0
+      // 走出边界了，这条路不通，概率�?0
       if (i < 0 || j < 0 || i >= n || j >= n) {
           return 0;
       }
-      // k 步走完了还没超出边界，这一步的概率是1，还需要乘上前面的 k 个 1/8
+      // k 步走完了还没超出边界，这�?步的概率�?1，还�?要乘上前面的 k �? 1/8
       if (k == 0) {
           return 1;
       }
@@ -108,19 +108,19 @@ class SolutionKP3 {
   private static final int[][] DIRS = {{1, 2}, {2, 1}, {-1, 2}, {2, -1}, {1, -2}, {-2, 1}, {-1, -2}, {-2, -1}};
 
   public double knightProbability(int n, int k, int row, int column) {
-      // 动态规划
+      // 动�?�规�?
       double[][][] dp = new double[n][n][k + 1];
-      // k 从 0 开始变大
+      // k �? 0 �?始变�?
       for (int kk = 0; kk <= k; kk++) {
           for (int i = 0; i < n; i++) {
               for (int j = 0; j < n; j++) {
-                  // 走 0 步就到 [i, j] 的概率为1
+                  // �? 0 步就�? [i, j] 的概率为1
                   if (kk == 0) {
                       dp[i][j][kk] = 1;
                   } else {
                       // 八个方向
                       for (int[] dir : DIRS) {
-                          // 上一个坐标，这里用 减号 也是可以的
+                          // 上一个坐标，这里�? 减号 也是可以�?
                           int ni = i + dir[0];
                           int nj = j + dir[1];
                           if (ni >= 0 && nj >= 0 && ni < n && nj < n) {
@@ -131,7 +131,7 @@ class SolutionKP3 {
               }
           }
       }
-      // 返回走 k 步到 [row, column] 坐标的概率
+      // 返回�? k 步到 [row, column] 坐标的概�?
       return dp[row][column][k];
   }
 }

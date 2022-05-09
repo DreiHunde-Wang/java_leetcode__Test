@@ -1,7 +1,8 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.Arrays;
-import numsorttest.*;
+
+import src.numsorttest.*;
 
 /**
  * 寻找第k个最大值

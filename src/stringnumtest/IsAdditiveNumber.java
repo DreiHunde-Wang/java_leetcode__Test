@@ -1,10 +1,10 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**
- * 累加数 是一个字符串，组成它的数字可以形成累加序列。
- * 一个有效的 累加序列 必须 至少 包含 3 个数。除了最开始的两个数以外，字符串中的其他数都等于它之前两个数相加的和。
- * 给你一个只包含数字 '0'-'9' 的字符串，编写一个算法来判断给定输入是否是 累加数 。如果是，返回 true ；否则，返回 false 。
- * 说明：累加序列里的数 不会 以 0 开头，所以不会出现 1, 2, 03 或者 1, 02, 3 的情况。
+ * 累加�? 是一个字符串，组成它的数字可以形成累加序列�??
+ * �?个有效的 累加序列 必须 至少 包含 3 个数。除了最�?始的两个数以外，字符串中的其他数都等于它之前两个数相加的和�??
+ * 给你�?个只包含数字 '0'-'9' 的字符串，编写一个算法来判断给定输入是否�? 累加�? 。如果是，返�? true ；否则，返回 false �?
+ * 说明：累加序列里的数 不会 �? 0 �?头，�?以不会出现�?1, 2, 03 或�?��?1, 02, 3 的情况�??
  * @author Dreihunde
  *
  */
@@ -84,14 +84,14 @@ public class IsAdditiveNumber {
 
         for (int i = index; i < num.length(); i++) {
             char c = num.charAt(i);
-            //0不能当数字首位使用，但可以使用自身
+            //0不能当数字首位使用，但可以使用自�?
             if (num.charAt(index) == '0' && i > index) {
                 return false;
             }
             current = current * 10 + c - '0';
             if (count > 1) {
                 long sum = prepre + pre;
-                //剪枝，current大于sum就错误，小于就继续增加索引
+                //剪枝，current大于sum就错误，小于就继续增加索�?
                 if (sum < current) {
                     return false;
                 }
@@ -100,7 +100,7 @@ public class IsAdditiveNumber {
                 }
             }
 
-             // 当前满足条件了，或者还不到两个数，向下一层探索
+             // 当前满足条件了，或�?�还不到两个数，向下�?层探�?
             if (dfs(num, i + 1, count + 1, pre, current)) {
                 return true;
             }

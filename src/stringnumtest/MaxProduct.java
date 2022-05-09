@@ -1,4 +1,4 @@
-package stringnumtest;
+package src.stringnumtest;
 
 import java.util.Random;
 import java.util.Set;
@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.HashMap;
 
 /**
- * 给你一个字符串数组 words ，找出并返回 length(words[i]) * length(words[j]) 的最大值，
- * 并且这两个单词不含有公共字母。如果不存在这样的两个单词，返回 0 。
+ * 给你�?个字符串数组 words ，找出并返回 length(words[i]) * length(words[j]) 的最大�?�，
+ * 并且这两个单词不含有公共字母。如果不存在这样的两个单词，返回 0 �?
  * @author Dreihunde
  *
  */

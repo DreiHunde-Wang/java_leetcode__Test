@@ -1,4 +1,4 @@
-package dfsandbfs;
+package src.dfsandbfs;
 
 import java.util.ArrayList;
 import java.util.Arrays;

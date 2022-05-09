@@ -1,8 +1,8 @@
-package listtest;
+package src.listtest;
 
 import java.util.Deque;
 
-import listtest.ListNode;
+import src.listtest.ListNode;
 
 import java.util.ArrayDeque;
 

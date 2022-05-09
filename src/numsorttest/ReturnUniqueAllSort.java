@@ -1,11 +1,11 @@
-package numsorttest;
+package src.numsorttest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import printtreenode.ComnTest;
+import src.printtreenode.ComnTest;
 
 /**
  * 输入一个数组，打印出该数组中数字的所有排列。

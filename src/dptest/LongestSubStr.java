@@ -1,9 +1,9 @@
-package dptest;
+package src.dptest;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import numsorttest.NumMass;
+import src.numsorttest.NumMass;
 
 /**
  * 请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。

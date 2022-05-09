@@ -1,10 +1,10 @@
-package slidewindowtest;
+package src.slidewindowtest;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import numsorttest.CommonTest;
-import printtreenode.ComnTest;
+import src.numsorttest.CommonTest;
+import src.printtreenode.ComnTest;
 
 /**
  * 输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。

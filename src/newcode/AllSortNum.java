@@ -1,4 +1,4 @@
-package newcode;
+package src.newcode;
 
 import java.io.BufferedReader;
 import java.io.IOException;

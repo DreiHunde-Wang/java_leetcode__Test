@@ -1,4 +1,4 @@
-package dfsandbfs;
+package src.dfsandbfs;
 
 /**
  * 给你一个大小为 m x n 的矩阵 board 表示甲板，其中，每个单元格可以是一艘战舰 'X' 或者是一个空位 '.' ，

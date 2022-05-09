@@ -1,4 +1,4 @@
-package mathtest;
+package src.mathtest;
 
 import java.util.Arrays;
 import java.util.HashMap;

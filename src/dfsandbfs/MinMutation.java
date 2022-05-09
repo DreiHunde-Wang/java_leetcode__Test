@@ -1,4 +1,4 @@
-package dfsandbfs;
+package src.dfsandbfs;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;

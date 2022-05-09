@@ -1,4 +1,4 @@
-package binaryandtest;
+package src.binaryandtest;
 
 
 

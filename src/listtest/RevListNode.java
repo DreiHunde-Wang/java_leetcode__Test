@@ -1,4 +1,4 @@
-package listtest;
+package src.listtest;
 
 import java.util.Deque;
 import java.util.ArrayDeque;

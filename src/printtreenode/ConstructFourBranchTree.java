@@ -1,4 +1,4 @@
-package printtreenode;
+package src.printtreenode;
 
 /**
  * 给你一个 n * n 矩阵 grid ，矩阵由若干 0 和 1 组成。请你用四叉树表示该矩阵 grid 。

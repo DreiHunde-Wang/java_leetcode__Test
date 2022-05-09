@@ -1,4 +1,4 @@
-package classdesign;
+package src.classdesign;
 
 
 //Â·¾¶Ñ¹ËõÊ÷×´UnionFind union O(1) find O(1) O(n)

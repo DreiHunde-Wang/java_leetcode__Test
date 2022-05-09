@@ -1,4 +1,4 @@
-package listtest;
+package src.listtest;
 
 class ListNode {
 	public int val;

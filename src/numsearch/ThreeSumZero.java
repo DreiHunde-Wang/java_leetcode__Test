@@ -1,13 +1,13 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？
- * 请你找出所有和为 0 且不重复的三元组。
- * 注意：答案中不可以包含重复的三元组。
+ * 给你�?个包�? n 个整数的数组 nums，判断 nums 中是否存在三个元�? a，b，c ，使得 a + b + c = 0 �?
+ * 请你找出�?有和�? 0 且不重复的三元组�?
+ * 注意：答案中不可以包含重复的三元组�??
  * @author Dreihunde
  *
  */
@@ -80,7 +80,7 @@ public class ThreeSumZero {
         return -1;
     }
     
-    //method 3 遍历+双指针 O(n2) O(1)
+    //method 3 遍历+双指�? O(n2) O(1)
     public static List<List<Integer>> threeSum3(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         if (nums == null || nums.length <= 2) return ans;
@@ -99,7 +99,7 @@ public class ThreeSumZero {
                 if (nums[left] + nums[right] == target) {
                     ans.add(new ArrayList<>(Arrays.asList(nums[i], nums[left], nums[right])));
                     
-                    // 现在要增加 left，减小 right，但是不能重复，比如: [-2, -1, -1, -1, 3, 3, 3], i = 0, left = 1, right = 6, [-2, -1, 3] 的答案加入后，需要排除重复的 -1 和 3
+                    // 现在要增�? left，减�? right，但是不能重复，比如: [-2, -1, -1, -1, 3, 3, 3], i = 0, left = 1, right = 6, [-2, -1, 3] 的答案加入后，需要排除重复的 -1 �? 3
                     left++; right--; // 首先无论如何先要进行加减操作
                     while (left < right && nums[left] == nums[left - 1]) left++;
                     while (left < right && nums[right] == nums[right + 1]) right--;
@@ -113,32 +113,32 @@ public class ThreeSumZero {
         return ans;
     }
     
-    //offical 遍历+双指针 O(n2) O(1)
+    //offical 遍历+双指�? O(n2) O(1)
     public static List<List<Integer>> threeSum4(int[] nums) {
         int n = nums.length;
         Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
         // 枚举 a
         for (int first = 0; first < n; ++first) {
-            // 需要和上一次枚举的数不相同
+            // �?要和上一次枚举的数不相同
             if (first > 0 && nums[first] == nums[first - 1]) {
                 continue;
             }
-            // c 对应的指针初始指向数组的最右端
+            // c 对应的指针初始指向数组的�?右端
             int third = n - 1;
             int target = -nums[first];
             // 枚举 b
             for (int second = first + 1; second < n; ++second) {
-                // 需要和上一次枚举的数不相同
+                // �?要和上一次枚举的数不相同
                 if (second > first + 1 && nums[second] == nums[second - 1]) {
                     continue;
                 }
-                // 需要保证 b 的指针在 c 的指针的左侧
+                // �?要保�? b 的指针在 c 的指针的左侧
                 while (second < third && nums[second] + nums[third] > target) {
                     --third;
                 }
-                // 如果指针重合，随着 b 后续的增加
-                // 就不会有满足 a+b+c=0 并且 b<c 的 c 了，可以退出循环
+                // 如果指针重合，随�? b 后续的增�?
+                // 就不会有满足 a+b+c=0 并且 b<c �? c 了，可以�?出循�?
                 if (second == third) {
                     break;
                 }

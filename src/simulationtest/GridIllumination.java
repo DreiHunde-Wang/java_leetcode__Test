@@ -1,4 +1,4 @@
-package simulationtest;
+package src.simulationtest;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -6,20 +6,20 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 在大小为 n x n 的网格 grid 上，每个单元格都有一盏灯，最初灯都处于 关闭 状态。
- * 给你一个由灯的位置组成的二维数组 lamps ，其中 lamps[i] = [rowi, coli] 表示 打开 位于 grid[rowi][coli] 的灯。
- * 即便同一盏灯可能在 lamps 中多次列出，不会影响这盏灯处于 打开 状态。
- * 当一盏灯处于打开状态，它将会照亮 自身所在单元格 以及同一 行 、同一 列 和两条 对角线 上的 所有其他单元格 。
- * 另给你一个二维数组 queries ，其中 queries[j] = [rowj, colj] 。
- * 对于第 j 个查询，如果单元格 [rowj, colj] 是被照亮的，则查询结果为 1 ，否则为 0 。
- * 在第 j 次查询之后 [按照查询的顺序] ，关闭 位于单元格 grid[rowj][colj] 上及相邻 8 个方向上（与单元格 grid[rowi][coli] 共享角或边）的任何灯。
- * 返回一个整数数组 ans 作为答案， ans[j] 应等于第 j 次查询 queries[j] 的结果，1 表示照亮，0 表示未照亮。
+ * 在大小为 n x n 的网�? grid 上，每个单元格都有一盏灯，最初灯都处�? 关闭 状�?��??
+ * 给你�?个由灯的位置组成的二维数组 lamps ，其�? lamps[i] = [rowi, coli] 表示 打开 位于 grid[rowi][coli] 的灯�?
+ * 即便同一盏灯可能�? lamps 中多次列出，不会影响这盏灯处�? 打开 状�?��??
+ * 当一盏灯处于打开状�?�，它将会照�? 自身�?在单元格 以及同一 �? 、同�? �? 和两�? 对角�? 上的 �?有其他单元格 �?
+ * 另给你一个二维数�? queries ，其�? queries[j] = [rowj, colj] �?
+ * 对于�? j 个查询，如果单元�? [rowj, colj] 是被照亮的，则查询结果为 1 ，否则为 0 �?
+ * 在第 j 次查询之�? [按照查询的顺序] ，关�? 位于单元�? grid[rowj][colj] 上及相邻 8 个方向上（与单元�? grid[rowi][coli] 共享角或边）的任何灯�?
+ * 返回�?个整数数�? ans 作为答案�? ans[j] 应等于第 j 次查询 queries[j] 的结果，1 表示照亮�?0 表示未照亮�??
 链接：https://leetcode-cn.com/problems/grid-illumination
  * @author Dreihunde
  *
  */
 public class GridIllumination {
-	//method 1 hashmap记录 O(l + q) O(l) 其中 l 和 q 分别是 lamps 和 queries 的长度。
+	//method 1 hashmap记录 O(l + q) O(l) 其中 l �? q 分别�? lamps �? queries 的长度�??
     public int[] gridIllumination(int n, int[][] lamps, int[][] queries) {
         if (queries.length == 0) {
             return new int[0];
@@ -88,7 +88,7 @@ public class GridIllumination {
         }
         return ans;
     }
-    //x, y的最大值为10^9
+    //x, y的最大�?�为10^9
     public long hash(int x, int y) {
         return (long) x + ((long) y << 32);
     }

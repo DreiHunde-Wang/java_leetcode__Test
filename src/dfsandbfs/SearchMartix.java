@@ -1,18 +1,18 @@
-package dfsandbfs;
+package src.dfsandbfs;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- * 编写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target 。该矩阵具有以下特性：
- * 每行的元素从左到右升序排列。
- * 每列的元素从上到下升序排列。
+ * 编写�?个高效的算法来搜索 m x n 矩阵 matrix 中的�?个目标�?? target 。该矩阵具有以下特�?�：
+ * 每行的元素从左到右升序排列�??
+ * 每列的元素从上到下升序排列�??
  * https://leetcode-cn.com/leetbook/read/top-interview-questions/xmlwi1/
  * @author Dreihunde
  *
  */
 public class SearchMartix {
-	//method 1 提前终止的遍历 O(mn) O(mn)
+	//method 1 提前终止的遍�? O(mn) O(mn)
 	public boolean searchMatrix1(int[][] matrix, int target) {
 	        int m = matrix.length;
 	        int n = matrix[0].length;
@@ -65,7 +65,7 @@ public class SearchMartix {
 	        return false;
 	}
  	
- 	//method 3 优化遍历(从右上角开始找) O(mn) O(1)
+ 	//method 3 优化遍历(从右上角�?始找) O(mn) O(1)
  	public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length;
         int n = matrix[0].length;

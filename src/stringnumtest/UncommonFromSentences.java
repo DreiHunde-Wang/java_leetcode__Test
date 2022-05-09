@@ -1,4 +1,4 @@
-package stringnumtest;
+package src.stringnumtest;
 
 import java.util.ArrayList;
 import java.util.HashMap;

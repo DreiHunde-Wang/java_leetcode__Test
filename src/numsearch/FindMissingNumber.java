@@ -1,4 +1,4 @@
-package numsearch;
+package src.numsearch;
 
 /**
  * 数组为递增数列，寻找错位的数字下标

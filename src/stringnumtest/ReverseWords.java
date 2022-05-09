@@ -1,4 +1,4 @@
-package stringnumtest;
+package src.stringnumtest;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**
  * 给你一个字符串数组 board 表示井字游戏的棋盘。当且仅当在井字游戏过程中，棋盘有可能达到 board 所显示的状态时，才返回 true 。

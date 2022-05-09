@@ -1,4 +1,4 @@
-package simulationtest;
+package src.simulationtest;
 
 /**
  * 给定一个整数 num，将其转化为 7 进制，并以字符串形式输出。

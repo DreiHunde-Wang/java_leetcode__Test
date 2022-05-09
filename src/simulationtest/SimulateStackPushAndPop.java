@@ -1,4 +1,4 @@
-package simulationtest;
+package src.simulationtest;
 
 import java.util.ArrayDeque;
 

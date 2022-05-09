@@ -1,4 +1,4 @@
-package slidewindowtest;
+package src.slidewindowtest;
 
 import java.util.HashMap;
 import java.util.HashSet;

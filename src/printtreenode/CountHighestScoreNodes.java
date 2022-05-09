@@ -1,4 +1,4 @@
-package printtreenode;
+package src.printtreenode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 给你一棵根节点为 0 的 二叉树 ，它总共有 n 个节点，节点编号为 0 到 n - 1 。
- * 同时给你一个下标从 0 开始的整数数组 parents 表示这棵树，其中 parents[i] 是节点 i 的父节点。
- * 由于节点 0 是根，所以 parents[0] == -1 。
- * 一个子树的 大小 为这个子树内节点的数目。每个节点都有一个与之关联的 分数 。
- * 求出某个节点分数的方法是，将这个节点和与它相连的边全部 删除 ，剩余部分是若干个 非空 子树，这个节点的 分数 为所有这些子树 大小的乘积 。
- * 请你返回有 最高得分 节点的 数目 。
+ * 给你�?棵根节点�? 0 的 二叉树 ，它总共�? n 个节点，节点编号为�?0 到 n - 1 �?
+ * 同时给你�?个下标从 0 �?始的整数数组 parents 表示这棵树，其中 parents[i] 是节�? i 的父节点�?
+ * 由于节点 0 是根，所以 parents[0] == -1 �?
+ * �?个子树的 大小 为这个子树内节点的数目�?�每个节点都有一个与之关联的 分数 �?
+ * 求出某个节点分数的方法是，将这个节点和与它相连的边全�? 删除 ，剩余部分是若干�? 非空 子树，这个节点的 分数 为所有这些子�? 大小的乘积 �??
+ * 请你返回�? �?高得分 节点的 数目 �?
  * 链接：https://leetcode-cn.com/problems/count-nodes-with-the-highest-score
  * @author Dreihunde
  *

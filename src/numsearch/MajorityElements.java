@@ -1,22 +1,22 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * 给定一个大小为 n 的整数数组，找出其中所有出现超过 ⌊n/3⌋ 次的元素。
+ * 给定�?个大小为 n 的整数数组，找出其中�?有出现超�? ⌊n/3�? 次的元素�?
  * https://leetcode-cn.com/problems/majority-element-ii/
  * @author Dreihunde
  *
  */
 public class MajorityElements {
-	//两次筛选 O(n) O(1)
+	//两次筛�?? O(n) O(1)
     public List<Integer> majorityElement1(int[] nums) {
         List<Integer> ans = new ArrayList<>();
         int n = nums.length;
         int[][] rets = new int[2][2];
-        //第一次筛选出频率最高的两个数
+        //第一次筛选出频率�?高的两个�?
         for (int i = 0; i < n; i++) {
             if (isAdd(rets, nums[i])) {
                 continue;

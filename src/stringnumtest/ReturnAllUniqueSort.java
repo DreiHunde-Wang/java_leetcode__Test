@@ -1,14 +1,14 @@
-package stringnumtest;
+package src.stringnumtest;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import numsorttest.CommonTest;
-import printtreenode.ComnTest;
+import src.numsorttest.CommonTest;
+import src.printtreenode.ComnTest;
 
 /**
- * 输入一个字符串，打印出该字符串中字符的所有排列。
- * 你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
+ * 输入�?个字符串，打印出该字符串中字符的�?有排列�??
+ * 你可以以任意顺序返回这个字符串数组，但里面不能有重复元素�?
  * @author Dreihunde
  *
  */
@@ -38,8 +38,8 @@ public class ReturnAllUniqueSort {
 		}
 		
 		for (int i = 0; i < arr.length; i++) {
-			// vis[i - 1] == true，说明同⼀树⽀nums[i - 1]使⽤过
-            // vis[i - 1] == false，说明同⼀树层nums[i - 1]使⽤过
+			// vis[i - 1] == true，说明同�?树⽀nums[i - 1]使⽤�?
+            // vis[i - 1] == false，说明同�?树层nums[i - 1]使⽤�?
             // 如果同⼀树层arr[i - 1]使用过则直接跳过
 			if (vis[i] || (i > 0 && !vis[i - 1] && arr[i] == arr[i - 1])) {
 				continue;
@@ -47,14 +47,14 @@ public class ReturnAllUniqueSort {
 			vis[i] = true;
 			perm.append(arr[i]);
 			dfs(arr, idx + 1, perm);
-			//idx = perm.length() - 1,即刚刚添加的值
+			//idx = perm.length() - 1,即刚刚添加的�?
 			perm.deleteCharAt(idx);
 			//回溯
 			vis[i] = false;
 		}
 	}
 	
-	//method 2 下一个排列 O(n * n!) O(1)
+	//method 2 下一个排�? O(n * n!) O(1)
 	public String[] permutation2(String s) {
 		List<String> ret = new ArrayList<>();
         int n = s.length();

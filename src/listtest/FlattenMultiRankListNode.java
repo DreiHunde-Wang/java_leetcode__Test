@@ -1,6 +1,6 @@
-package listtest;
+package src.listtest;
 
-import numsearch.FindMinSubMoreThanTarget;
+import src.numsearch.FindMinSubMoreThanTarget;
 
 /**
  * 多级双向链表中，除了指向下一个节点和前一个节点指针之外，它还有一个子链表指针，可能指向单独的双向链表。

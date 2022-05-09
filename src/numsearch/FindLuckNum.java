@@ -1,4 +1,4 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;

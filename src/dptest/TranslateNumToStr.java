@@ -1,6 +1,6 @@
-package dptest;
+package src.dptest;
 
-import numsorttest.NumMass;
+import src.numsorttest.NumMass;
 
 /**
  * 给定一个数字，我们按照如下规则把它翻译为字符串：

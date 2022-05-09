@@ -1,11 +1,11 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**
- * 当一个字符串 s 包含的每一种字母的大写和小写形式 同时 出现在 s 中，就称这个字符串 s 是 美好 字符串。
- * 比方说，"abABB" 是美好字符串，因为 'A' 和 'a' 同时出现了，且 'B' 和 'b' 也同时出现了。
- * 然而，"abA" 不是美好字符串因为 'b' 出现了，而 'B' 没有出现。
- * 给你一个字符串 s ，请你返回 s 最长的 美好子字符串 。如果有多个答案，请你返回 最早 出现的一个。
- * 如果不存在美好子字符串，请你返回一个空字符串。
+ * 当一个字符串 s 包含的每�?种字母的大写和小写形�? 同时 出现�? s 中，就称这个字符串 s �? 美好 字符串�??
+ * 比方说，"abABB" 是美好字符串，因为�?'A' 和�?'a' 同时出现了，且�?'B' 和�?'b' 也同时出现了�?
+ * 然�?�，"abA" 不是美好字符串因为�?'b' 出现了，而�?'B' 没有出现�?
+ * 给你�?个字符串 s ，请你返回 s �?长的 美好子字符串 。如果有多个答案，请你返回 最早 出现的�?个�??
+ * 如果不存在美好子字符串，请你返回�?个空字符串�??
  * https://leetcode-cn.com/problems/longest-nice-substring/
  * @author Dreihunde
  *
@@ -54,7 +54,7 @@ class Solution2 {
     public String longestNiceSubstring(String s) {
         this.maxPos = 0;
         this.maxLen = 0;
-        //dfs整个字符串
+        //dfs整个字符�?
         dfs(s, 0, s.length() - 1);
         return s.substring(maxPos, maxPos + maxLen);
     }
@@ -72,7 +72,7 @@ class Solution2 {
                 upper |= 1 << (s.charAt(i) - 'A');
             }
         }
-        //如果该字符区间符合要求，就更新最大长度
+        //如果该字符区间符合要求，就更新最大长�?
         if (lower == upper) {
             if (end - start + 1 > maxLen) {
                 maxPos = start;
@@ -82,15 +82,15 @@ class Solution2 {
         }
         //如果不符合要求，就相与找出两者共同的字符 
         int valid = lower & upper;
-        //从起始点开始搜素
+        //从起始点�?始搜�?
         int pos = start;
         while (pos <= end) {
             start = pos;
-            //查询到第一个不符合要求的字符
+            //查询到第�?个不符合要求的字�?
             while (pos <= end && (valid & (1 << Character.toLowerCase(s.charAt(pos)) - 'a')) != 0) {
                 ++pos;
             }
-            //以此为分界点，分治
+            //以此为分界点，分�?
             dfs(s, start, pos - 1);
             ++pos;
         }

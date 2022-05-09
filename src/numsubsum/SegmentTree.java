@@ -1,4 +1,4 @@
-package numsubsum;
+package src.numsubsum;
 
 import java.util.concurrent.Semaphore;
 

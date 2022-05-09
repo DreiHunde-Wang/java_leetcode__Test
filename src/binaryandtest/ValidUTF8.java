@@ -1,4 +1,4 @@
-package binaryandtest;
+package src.binaryandtest;
  
 /**
  * 给定一个表示数据的整数数组 data ，返回它是否为有效的 UTF-8 编码。

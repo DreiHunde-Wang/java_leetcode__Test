@@ -1,4 +1,4 @@
-package simulationtest;
+package src.simulationtest;
 
 /**
  * 数字以0123456789101112131415…的格式序列化到一个字符序列中。

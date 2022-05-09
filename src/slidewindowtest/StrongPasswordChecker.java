@@ -1,4 +1,4 @@
-package slidewindowtest;
+package src.slidewindowtest;
 
 public class StrongPasswordChecker {
 	//method 1 ·ÖÀàÌÖÂÛ O(n) O(1)

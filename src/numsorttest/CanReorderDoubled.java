@@ -1,4 +1,4 @@
-package numsorttest;
+package src.numsorttest;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 给定一个长度为偶数的整数数组 arr，只有对 arr 进行重组后可以满足 “对于每个 0 <= i < len(arr) / 2，
- * 都有 arr[2 * i + 1] = 2 * arr[2 * i]” 时，返回 true；否则，返回 false。
+ * 给定�?个长度为偶数的整数数�? arr，只有对 arr 进行重组后可以满�? “对于每�? 0 <= i < len(arr) / 2�?
+ * 都有 arr[2 * i + 1] = 2 * arr[2 * i]” 时，返�? true；否则，返回 false�?
  * 链接：https://leetcode-cn.com/problems/array-of-doubled-pairs
  * @author Dreihunde
  *
@@ -31,7 +31,7 @@ public class CanReorderDoubled {
         Collections.sort(vals, (a, b) -> Math.abs(a) - Math.abs(b));
 
         for (int x : vals) {
-            if (cnt.getOrDefault(2 * x, 0) < cnt.get(x)) { // 无法找到足够的 2x 与 x 配对
+            if (cnt.getOrDefault(2 * x, 0) < cnt.get(x)) { // 无法找到足够�? 2x �? x 配对
                 return false;
             }
             cnt.put(2 * x, cnt.getOrDefault(2 * x, 0) - cnt.get(x));

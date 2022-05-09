@@ -1,4 +1,4 @@
-package dptest;
+package src.dptest;
 
 /**
  * 在一个 m*n 的棋盘的每一格都放有一个礼物，每个礼物都有一定的价值（价值大于 0）。

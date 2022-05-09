@@ -1,18 +1,18 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.Arrays;
 
-import numsorttest.CommonTest;
+import src.numsorttest.CommonTest;
 
 /**
- * 给定一个含有 n 个正整数的数组和一个正整数 target 。
- * 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。
- * 如果不存在符合条件的子数组，返回 0 。
+ * 给定�?个含有 n 个正整数的数组和�?个正整数 target �?
+ * 找出该数组中满足其和 �? target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度�??
+ * 如果不存在符合条件的子数组，返回 0 �?
  * @author Dreihunde
  *
  */
 public class FindMinSubMoreThanTarget {
-	//method 1 双指针 O(n) O(1)
+	//method 1 双指�? O(n) O(1)
     public int minSubArrayLen1(int target, int[] nums) {
         int n = nums.length;
         int left = 0;
@@ -34,7 +34,7 @@ public class FindMinSubMoreThanTarget {
         return minLen > n ? 0 : minLen;
     }
 
-    //method 2 前缀和+二分查找 O(nlogn) O(n)
+    //method 2 前缀�?+二分查找 O(nlogn) O(n)
     public int minSubArrayLen2(int s, int[] nums) {
         int n = nums.length;
         if (n == 0) {
@@ -43,8 +43,8 @@ public class FindMinSubMoreThanTarget {
         int ans = Integer.MAX_VALUE;
         int[] sums = new int[n + 1]; 
         // 为了方便计算，令 size = n + 1 
-        // sums[0] = 0 意味着前 0 个元素的前缀和为 0
-        // sums[1] = A[0] 前 1 个元素的前缀和为 A[0]
+        // sums[0] = 0 意味�?�? 0 个元素的前缀和为 0
+        // sums[1] = A[0] �? 1 个元素的前缀和为 A[0]
         // 以此类推
         for (int i = 1; i <= n; i++) {
             sums[i] = sums[i - 1] + nums[i - 1];

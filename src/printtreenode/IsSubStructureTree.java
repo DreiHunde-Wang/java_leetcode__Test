@@ -1,4 +1,4 @@
-package printtreenode;
+package src.printtreenode;
 
 /**
  * 判断树2是否为树1的子树

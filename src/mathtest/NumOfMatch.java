@@ -1,4 +1,4 @@
-package mathtest;
+package src.mathtest;
 
 /**
  * 给你一个整数 n ，表示比赛中的队伍数。比赛遵循一种独特的赛制：

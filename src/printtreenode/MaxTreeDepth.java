@@ -1,4 +1,4 @@
-package printtreenode;
+package src.printtreenode;
 
 import java.util.LinkedList;
 import java.util.Queue;

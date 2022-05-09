@@ -1,4 +1,4 @@
-package printtreenode;
+package src.printtreenode;
 
 /**
  * 给定一个二叉树，找出其最小深度。

@@ -1,12 +1,12 @@
-package mathtest;
+package src.mathtest;
 
 /**
- * 你的任务是计算 ab 对 1337 取模，a 是一个正整数，b 是一个非常大的正整数且会以数组形式给出。
+ * 你的任务是计�? ab �? 1337 取模，a 是一个正整数，b 是一个非常大的正整数且会以数组形式给出�??
  * @author Dreihunde
  *
  */
 public class SuperRank {
-	//method 1 快速幂 + 分配律(a⋅b)modm=[(amodm)⋅(bmodm)]modm
+	//method 1 快�?�幂 + 分配�?(a⋅b)modm=[(amodm)�?(bmodm)]modm
     int mod = 1337;
     public int superPow1(int a, int[] b) {
         int ans = 1;
@@ -19,7 +19,7 @@ public class SuperRank {
         return ans;
     }
 
-    //method 2 秦九韶算法 
+    //method 2 秦九韶算�? 
     public int superPow2(int a, int[] b) {
         int ans = 1;
         for (int n : b) {

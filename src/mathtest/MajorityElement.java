@@ -1,11 +1,11 @@
-package mathtest;
+package src.mathtest;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import binaryandtest.PrintSingleNum2;
+import src.binaryandtest.PrintSingleNum2;
 
 /**
  * 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。

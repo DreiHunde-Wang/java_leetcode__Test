@@ -1,4 +1,4 @@
-package binaryandtest;
+package src.binaryandtest;
 
 /**
  * 给你两个整数 left 和 right ，在闭区间 [left, right] 范围内，统计并返回 计算置位位数为质数 的整数个数。

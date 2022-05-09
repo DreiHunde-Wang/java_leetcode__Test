@@ -1,4 +1,4 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**
  * 句子仅由小写字母（'a' 到 'z'）、数字（'0' 到 '9'）、连字符（'-'）、标点符号（'!'、'.' 和 ','）以及空格（' '）组成。

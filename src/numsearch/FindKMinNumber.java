@@ -1,9 +1,9 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-import numsorttest.CommonTest;
+import src.numsorttest.CommonTest;
 
 public class FindKMinNumber {
 	//method 1 ÅÅĞò+Êä³ö O(nlogn) O(logn)

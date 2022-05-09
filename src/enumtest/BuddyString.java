@@ -1,4 +1,4 @@
-package enumtest;
+package src.enumtest;
 
 public class BuddyString {
 	public boolean buddyStrings1(String s, String goal) {

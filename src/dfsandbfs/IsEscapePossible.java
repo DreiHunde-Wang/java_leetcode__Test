@@ -1,4 +1,4 @@
-package dfsandbfs;
+package src.dfsandbfs;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;
@@ -9,26 +9,26 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * 在一个 10^6 x 10^6 的网格中，每个网格上方格的坐标为 (x, y) 。
- * 现在从源方格 source = [sx, sy] 开始出发，意图赶往目标方格 target = [tx, ty] 。
- * 数组 blocked 是封锁的方格列表，其中每个 blocked[i] = [xi, yi] 表示坐标为 (xi, yi) 的方格是禁止通行的。
- * 每次移动，都可以走到网格中在四个方向上相邻的方格，只要该方格 不 在给出的封锁列表 blocked 上。同时，不允许走出网格。
- * 只有在可以通过一系列的移动从源方格 source 到达目标方格 target 时才返回 true。否则，返回 false。
+ * 在一�? 10^6 x 10^6 的网格中，每个网格上方格的坐标为 (x, y) �?
+ * 现在从源方格 source = [sx, sy] �?始出发，意图赶往目标方格 target = [tx, ty] �?
+ * 数组 blocked 是封锁的方格列表，其中每�? blocked[i] = [xi, yi] 表示坐标�? (xi, yi) 的方格是禁止通行的�??
+ * 每次移动，都可以走到网格中在四个方向上相邻的方格，只要该方格 �? 在给出的封锁列表 blocked 上�?�同时，不允许走出网格�??
+ * 只有在可以�?�过�?系列的移动从源方格 source 到达目标方格 target 时才返回 true。否则，返回 false�?
  * @author Dreihunde
  *
  */
 
-//method 1 bfs + 有限步数 O(n^2) O(n) n为blocked的长度
+//method 1 bfs + 有限步数 O(n^2) O(n) n为blocked的长�?
 public class IsEscapePossible {
 
-	//封锁，没被封锁，找寻到目标
+	//封锁，没被封锁，找寻到目�?
     private static final int BLOCKED = -1;
     private static final int VAILD = 0;
     private static final int FOUND = 1;
     
     //四个方向
     private static final int[][] dir = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-    //最大边界
+    //�?大边�?
     private static final int boundary = 1000000;
 
     public boolean isEscapePossible(int[][] blocked, int[] source, int[] target) {
@@ -65,7 +65,7 @@ public class IsEscapePossible {
         int ty = target[1];
         Point targetP = new Point(tx, ty);
         
-        //n个blocked最多封锁 n * (n - 1) / 2;
+        //n个blocked�?多封�? n * (n - 1) / 2;
         int count = blocked.length * (blocked.length - 1) / 2;
         ArrayDeque<Point> queue = new ArrayDeque<>();
         Set<Point> visited = new HashSet<>();
@@ -134,22 +134,22 @@ class Point {
     }
 }
 
-//method 2 离散化 + 广度优先搜索 O(n^2) O(n)
+//method 2 离散�? + 广度优先搜索 O(n^2) O(n)
 /**
- * 思路与算法
- * 我们也可以借助离散化技巧将网格「压缩」成一个规模较小的但等价的新网格，并在新网格上进行常规的广度优先搜索。
+ * 思路与算�?
+ * 我们也可以�?�助离散化技巧将网格「压缩�?�成�?个规模较小的但等价的新网格，并在新网格上进行常规的广度优先搜索�??
  * 以网格的每一行为例，可以发现，不同的行坐标只有：
- * 障碍所在的行，最多有 nn 个；
- * source 和arget 所在的行，最多有 22 个。
- * 网格的上下边界（即 -1和 10^6），有2个。
- * 因此不同的行坐标最多只有 n+4 个，我们可以对行坐标进行离散化，具体的规则如下：
- * 我们将行坐标进行升序排序；
- * 上边界离散化为 -1。上边界是排序后的第0个行坐标；
- * 如果排序后的第 i 个行坐标与第 i-1个行坐标相同，那么它们离散化之后的值也相同；
- * 如果排序后的第 i 个行坐标与第 i-1个行坐标相差 1，那么它们离散化之后的值也相差 1；
- * 如果排序后的第 i 个行坐标与第 i-1个行坐标相差超过 1，那么它们离散化之后的值相差 2。
- * 这样的正确性在于：在离散化前，如果两个行坐标本身相邻，那么在离散化之后它们也必须相邻。如果它们不相邻，可以把它们之间间隔的若干行直接「压缩」成一行，即行坐标相差 2。
- * 对于列坐标的离散化方法也是如此。在离散化完成之后，新的网格的规模不会超过 2(n+4)×2(n+4)，进行广度优先搜索需要的时间是可接受的。
+ * 障碍�?在的行，�?多有 nn 个；
+ * source 和arget �?在的行，�?多有 22 个�??
+ * 网格的上下边界（�? -1�? 10^6），�?2个�??
+ * 因此不同的行坐标�?多只�? n+4 个，我们可以对行坐标进行离散化，具体的规则如下：
+ * 我们将行坐标进行升序排序�?
+ * 上边界离散化�? -1。上边界是排序后的第0个行坐标�?
+ * 如果排序后的�? i 个行坐标与第 i-1个行坐标相同，那么它们离散化之后的�?�也相同�?
+ * 如果排序后的�? i 个行坐标与第 i-1个行坐标相差 1，那么它们离散化之后的�?�也相差 1�?
+ * 如果排序后的�? i 个行坐标与第 i-1个行坐标相差超过 1，那么它们离散化之后的�?�相�? 2�?
+ * 这样的正确�?�在于：在离散化前，如果两个行坐标本身相邻，那么在离散化之后它们也必须相邻�?�如果它们不相邻，可以把它们之间间隔的若干行直接「压缩�?�成�?行，即行坐标相差 2�?
+ * 对于列坐标的离散化方法也是如此�?�在离散化完成之后，新的网格的规模不会超�? 2(n+4)×2(n+4)，进行广度优先搜索需要的时间是可接受的�??
  * @author Dreihunde
  *
  */
@@ -161,7 +161,7 @@ class Solution {
         if (blocked.length < 2) {
             return true;
         }
-        // 离散化
+        // 离散�?
         TreeSet<Integer> rows = new TreeSet<Integer>();
         TreeSet<Integer> columns = new TreeSet<Integer>();
         for (int[] pos : blocked) {

@@ -1,4 +1,4 @@
-package numsubsum;
+package src.numsubsum;
 
 /**
  * Ê÷×´Êı×é

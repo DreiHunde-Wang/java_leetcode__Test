@@ -1,4 +1,4 @@
-package numsorttest;
+package src.numsorttest;
 
 public class HeapSortTest {
 	public static int[] heapSort(int[] nums) {

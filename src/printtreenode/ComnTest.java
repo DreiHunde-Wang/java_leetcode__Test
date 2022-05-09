@@ -1,11 +1,11 @@
-package printtreenode;
+package src.printtreenode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import printtreenode.PrintTreeUpToDown;
+import src.printtreenode.PrintTreeUpToDown;
 
 public class ComnTest {
 	public static void main(String[] args) {

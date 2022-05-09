@@ -1,22 +1,22 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
-import printtreenode.ComnTest;
-import printtreenode.TreeNode;
+import src.printtreenode.ComnTest;
+import src.printtreenode.TreeNode;
 
 /**
- * 给你一个按递增顺序排序的数组 arr 和一个整数 k 。数组 arr 由 1 和若干 素数  组成，且其中所有整数互不相同。
- * 对于每对满足 0 <= i < j < arr.length 的 i 和 j ，可以得到分数 arr[i] / arr[j] 。
- * 那么第 k 个最小的分数是多少呢?  以长度为 2 的整数数组返回你的答案, 这里 answer[0] == arr[i] 且 answer[1] == arr[j] 。
+ * 给你�?个按递增顺序排序的数�? arr 和一个整�? k 。数�? arr �? 1 和若�? 素数  组成，且其中�?有整数互不相同�??
+ * 对于每对满足 0 <= i < j < arr.length �? i �? j ，可以得到分�? arr[i] / arr[j] �?
+ * 那么第 k 个最小的分数是多少呢?  以长度为 2 的整数数组返回你的答�?, 这里 answer[0] == arr[i] 且 answer[1] == arr[j] �?
  * @author Dreihunde
  *
  */
 public class FindKSmallFraction {
-	//method 1 线性查找 + 二分阈值
+	//method 1 线�?�查�? + 二分阈�??
     public int[] kthSmallestPrimeFraction1(int[] arr, int k) {
         int n = arr.length;
         double left = 0.0;

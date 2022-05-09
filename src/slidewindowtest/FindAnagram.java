@@ -1,15 +1,15 @@
-package slidewindowtest;
+package src.slidewindowtest;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import numsorttest.CommonTest;
-import printtreenode.ComnTest;
+import src.numsorttest.CommonTest;
+import src.printtreenode.ComnTest;
 
 /**
- * 给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。
- * 异位词 指由相同字母重排列形成的字符串（包括相同的字符串）。
+ * 给定两个字符串 s �? p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引�?�不考虑答案输出的顺序�??
+ * 异位�? 指由相同字母重排列形成的字符串（包括相同的字符串）�??
  * @author Dreihunde
  *
  */
@@ -46,7 +46,7 @@ public class FindAnagram {
         
     }
 
-    //method 2 滑动窗口 + 差值匹配
+    //method 2 滑动窗口 + 差�?�匹�?
     public List<Integer> findAnagrams2(String s, String p) {
         int sLen = s.length();
         int pLen = p.length();

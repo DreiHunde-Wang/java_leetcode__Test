@@ -1,4 +1,4 @@
-package listtest;
+package src.listtest;
 
 /**
  * 给定一个链表的 头节点 head ，请判断其是否为回文链表。

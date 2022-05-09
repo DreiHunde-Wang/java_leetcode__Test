@@ -1,4 +1,4 @@
-package numsearch;
+package src.numsearch;
 
 /**
  * 给你一个仅由整数组成的有序数组，其中每个元素都会出现两次，唯有一个数只会出现一次。

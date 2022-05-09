@@ -1,4 +1,4 @@
-package dptest;
+package src.dptest;
 
 import java.util.PriorityQueue;
 

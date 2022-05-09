@@ -1,4 +1,4 @@
-package numsearch;
+package src.numsearch;
 
 public class NumSearch {
 	public static int search(int[] nums, int target) {

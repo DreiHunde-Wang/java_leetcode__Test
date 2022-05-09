@@ -1,16 +1,16 @@
-package dptest;
+package src.dptest;
 
 
 /**
- * 泰波那契序列 Tn 定义如下： 
+ * 泰波那契序列 Tn 定义如下：�?
  * T0 = 0, T1 = 1, T2 = 1, 且在 n >= 0 的条件下
  * Tn+3 = Tn + Tn+1 + Tn+2
- * 给你整数 n，请返回第 n 个泰波那契数 Tn 的值。
+ * 给你整数 n，请返回�? n 个泰波那契数 Tn 的�?��??
  * @author Dreihunde
  *
  */
 public class TribonacciTest {
-	//method 1 打表法
+	//method 1 打表�?
     static int[] cache = new int[40];
     static {
         cache[0] = 0;
@@ -24,7 +24,7 @@ public class TribonacciTest {
         return cache[n];
     }
     
-    //method 2 动态规划
+    //method 2 动�?�规�?
     public static int tribonacci2(int n) {
         if (n == 0)
         	return 0;
@@ -44,7 +44,7 @@ public class TribonacciTest {
         return m;
     }
     
-    //method 3 快速幂
+    //method 3 快�?�幂
     public static int tribonacci3(int n) {
        if (n == 0) {
            return 0;

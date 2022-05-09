@@ -1,9 +1,9 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**
- * 给定两个字符串 s 和 t 。返回 s 中包含 t 的所有字符的最短子字符串。如果 s 中不存在符合条件的子字符串，则返回空字符串 "" 。
- * 如果 s 中存在多个符合条件的子字符串，返回任意一个。
- * 注意： 对于 t 中重复字符，我们寻找的子字符串中该字符数量必须不少于 t 中该字符数量。
+ * 给定两个字符�? s 和 t 。返�? s 中包含 t 的所有字符的�?短子字符串�?�如�? s 中不存在符合条件的子字符串，则返回空字符�? "" �?
+ * 如果 s 中存在多个符合条件的子字符串，返回任意一个�??
+ * 注意�? 对于 t 中重复字符，我们寻找的子字符串中该字符数量必须不少于 t 中该字符数量�?
  * @author Dreihunde
  *
  */
@@ -53,7 +53,7 @@ public class minWindowInSrc {
         return true;
     }
 
-    //method 2 双指针 O(m + n) O(C)
+    //method 2 双指�? O(m + n) O(C)
     public String minWindow2(String s, String t) {
         int n = s.length();
         int m = t.length();

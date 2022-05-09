@@ -1,4 +1,4 @@
-package stringnumtest;
+package src.stringnumtest;
 
 /**½Ø¶Ï×Ö·û
  * 

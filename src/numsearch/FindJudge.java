@@ -1,4 +1,4 @@
-package numsearch;
+package src.numsearch;
 
 /**
  * 小镇里有 n 个人，按从 1 到 n 的顺序编号。传言称，这些人中有一个暗地里是小镇法官。

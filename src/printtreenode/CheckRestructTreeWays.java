@@ -1,4 +1,4 @@
-package printtreenode;
+package src.printtreenode;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,20 +9,20 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 给你一个数组 pairs ，其中 pairs[i] = [xi, yi] ，并且满足：
- * pairs 中没有重复元素
+ * 给你�?个数组 pairs ，其中 pairs[i] = [xi, yi] ，并且满足：
+ * pairs 中没有重复元�?
  * xi < yi
  * 令 ways 为满足下面条件的有根树的方案数：
- * 树所包含的所有节点值都在 pairs 中。
- * 一个数对 [xi, yi] 出现在 pairs 中 当且仅当 xi 是 yi 的祖先或者 yi 是 xi 的祖先。
- * 注意：构造出来的树不一定是二叉树。
- * 两棵树被视为不同的方案当存在至少一个节点在两棵树中有不同的父节点。
- * 请你返回：
- * 如果 ways == 0 ，返回 0 。
- * 如果 ways == 1 ，返回 1 。
- * 如果 ways > 1 ，返回 2 。
- * 一棵 有根树 指的是只有一个根节点的树，所有边都是从根往外的方向。
- * 我们称从根到一个节点路径上的任意一个节点（除去节点本身）都是该节点的 祖先 。根节点没有祖先。
+ * 树所包含的所有节点�?�都�? pairs 中�??
+ * �?个数对 [xi, yi] 出现在 pairs 中 当且仅当 xi 是 yi 的祖先或者 yi 是 xi 的祖先�??
+ * 注意：构造出来的树不�?定是二叉树�??
+ * 两棵树被视为不同的方案当存在至少�?个节点在两棵树中有不同的父节点�??
+ * 请你返回�?
+ * 如果 ways == 0 ，返回�?0 �?
+ * 如果 ways == 1 ，返�? 1 �?
+ * 如果 ways > 1 ，返回�?2 �?
+ * �?�? 有根树 指的是只有�?个根节点的树，所有边都是从根�?外的方向�?
+ * 我们称从根到�?个节点路径上的任意一个节点（除去节点本身）都是该节点�? 祖先 。根节点没有祖先�?
  * 链接：https://leetcode-cn.com/problems/number-of-ways-to-reconstruct-a-tree
  * @author Dreihunde
  *
@@ -36,7 +36,7 @@ public class CheckRestructTreeWays {
 
 }
 
-//method 1 构造+验证 O(n^2) O(n^2) 令n为 pairs 的长度，统计度数和点集复杂度为O(n)；最多有 2 * n个点，将点根据数进行排序复杂度为O(nlogn)
+//method 1 构�??+验证 O(n^2) O(n^2) 令n�? pairs 的长度，统计度数和点集复杂度为O(n)；最多有 2 * n个点，将点根据数进行排序复杂度为O(nlogn)
 class Solution1 {
   int N = 510;
   int[] cnts = new int[N], fa = new int[N];
@@ -81,7 +81,7 @@ class Solution1 {
   }
 }
 
-//method 2 直接模拟 O(m + n^2) O(m) 其中n为树中节点的数目，m 表示数组 pairs 的长度。需要遍历pairs ，时间复杂度为O(m)
+//method 2 直接模拟 O(m + n^2) O(m) 其中n为树中节点的数目，m 表示数组 pairs 的长度�?�需要遍历pairs ，时间复杂度为O(m)
 class Solution {
   public int checkWays(int[][] pairs) {
       Map<Integer, Set<Integer>> adj = new HashMap<Integer, Set<Integer>>();
@@ -91,7 +91,7 @@ class Solution {
           adj.get(p[0]).add(p[1]);
           adj.get(p[1]).add(p[0]);
       }
-      /* 检测是否存在根节点*/
+      /* �?测是否存在根节点*/
       int root = -1;
       Set<Map.Entry<Integer, Set<Integer>>> entries = adj.entrySet();
       for (Map.Entry<Integer, Set<Integer>> entry : entries) {
@@ -116,7 +116,7 @@ class Solution {
           int parent = -1;
           int parentDegree = Integer.MAX_VALUE;
 
-          /* 根据 degree 的大小找到 node 的父节点 parent */
+          /* 根据 degree 的大小找�? node 的父节点 parent */
           for (int neighbour : neighbours) {
               if (adj.get(neighbour).size() < parentDegree && adj.get(neighbour).size() >= currDegree) {
                   parent = neighbour;
@@ -127,7 +127,7 @@ class Solution {
               return 0;
           }
 
-          /* 检测 neighbours 是否是 adj[parent] 的子集 */
+          /* �?�? neighbours 是否�? adj[parent] 的子�? */
           for (int neighbour : neighbours) {
               if (neighbour == parent) {
                   continue;

@@ -1,10 +1,11 @@
-package numsearch;
+package src.numsearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
-import printtreenode.ComnTest;
+
+import src.printtreenode.ComnTest;
 
 public class FindKSmallPairs {
 	//method 1 优先队列 O(klogk) O(k)
