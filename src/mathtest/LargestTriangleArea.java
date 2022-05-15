@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 给定包含多个点的集合，从其中取三个点组成三角形，返回能组成的最大三角形的面积。
+ * https://leetcode.cn/problems/largest-triangle-area/
+ * @author Dreihunde
+ *
+ */
 public class LargestTriangleArea {
 	//method 1 模拟 O(n^3) O(1)
     public double largestTriangleArea1(int[][] points) {
