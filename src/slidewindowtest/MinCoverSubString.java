@@ -1,5 +1,10 @@
 package src.slidewindowtest;
 
+/**
+ * 给你一个字符串 s 、一个字符串 t 。
+ * 返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
+ * https://leetcode.cn/problems/minimum-window-substring/
+ */
 public class MinCoverSubString {
     //method 1 数组统计+滑动窗口 O(Cn) O(C) C = 52
     public String minWindow(String s, String t) {
