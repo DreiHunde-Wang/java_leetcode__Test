@@ -37,8 +37,8 @@ public class HeapSortTest {
 	 * @param end  [0, end] 是 nums 的有效部分
 	 */
 	private static void siftDown(int[] nums, int k, int end) {
-		while (2 * k + 1 <= end) {
-			int j = 2 * k + 1;
+		while (2 * k <= end) {
+			int j = 2 * k;
 			if (j + 1 <= end && nums[j + 1] > nums[j]) {
 				j++;
 			}

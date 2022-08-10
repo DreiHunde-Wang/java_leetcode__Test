@@ -76,11 +76,11 @@ public class MyPriorityQueue<T extends Comparable<T>> {
                 }
             }
             //比较当前结点和子结点中的较大者，如果当前结点不小，则结束循环
-            if (!less(k,max)){
+            if (!less(k, max)){
                 break;
             }
             //当前结点小，则交换，
-            exchange(k,max);
+            exchange(k, max);
             k = max;
         }
     }

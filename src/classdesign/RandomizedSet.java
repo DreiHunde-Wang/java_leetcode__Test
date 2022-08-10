@@ -7,10 +7,10 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * 设计一个支持在平均 时间复杂度 O(1) 下，执行以下操作的数据结构：
- * insert(val)：当元素 val 不存在时返回 true ，并向集合中插入该项，否则返回 false 。
- * remove(val)：当元素 val 存在时返回 true ，并从集合中移除该项，否则返回 false 。
- * getRandom：随机返回现有集合中的一项。每个元素应该有 相同的概率 被返回。
+ * 设计一个支持在平均时间复杂度 O(1)下，执行以下操作的数据结构：
+ * insert(val)：当元素 val 不存在时返回 true，并向集合中插入该项，否则返回 false 。
+ * remove(val)：当元素 val 存在时返回 true，并从集合中移除该项，否则返回 false。
+ * getRandom：随机返回现有集合中的一项。每个元素应该有相同的概率被返回。
  * @author Dreihunde
  *
  */

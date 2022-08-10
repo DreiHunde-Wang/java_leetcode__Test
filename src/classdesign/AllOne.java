@@ -5,21 +5,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * ÇëÄãÉè¼ÆÒ»¸öÓÃÓÚ´æ´¢×Ö·û´®¼ÆÊıµÄÊı¾İ½á¹¹£¬²¢ÄÜ¹»·µ»Ø¼ÆÊı×îĞ¡ºÍ×î´óµÄ×Ö·û´®¡£
- * ÊµÏÖ AllOne Àà£º
- * AllOne() ³õÊ¼»¯Êı¾İ½á¹¹µÄ¶ÔÏó¡£
- * inc(String key) ×Ö·û´® key µÄ¼ÆÊıÔö¼Ó 1 ¡£Èç¹ûÊı¾İ½á¹¹ÖĞÉĞ²»´æÔÚ key £¬ÄÇÃ´²åÈë¼ÆÊıÎª 1 µÄ key ¡£
- * dec(String key) ×Ö·û´® key µÄ¼ÆÊı¼õÉÙ 1 ¡£Èç¹û key µÄ¼ÆÊıÔÚ¼õÉÙºóÎª 0 £¬ÄÇÃ´ĞèÒª½«Õâ¸ö key ´ÓÊı¾İ½á¹¹ÖĞÉ¾³ı¡£²âÊÔÓÃÀı±£Ö¤£ºÔÚ¼õÉÙ¼ÆÊıÇ°£¬key ´æÔÚÓÚÊı¾İ½á¹¹ÖĞ¡£
- * getMaxKey() ·µ»ØÈÎÒâÒ»¸ö¼ÆÊı×î´óµÄ×Ö·û´®¡£Èç¹ûÃ»ÓĞÔªËØ´æÔÚ£¬·µ»ØÒ»¸ö¿Õ×Ö·û´® "" ¡£
- * getMinKey() ·µ»ØÈÎÒâÒ»¸ö¼ÆÊı×îĞ¡µÄ×Ö·û´®¡£Èç¹ûÃ»ÓĞÔªËØ´æÔÚ£¬·µ»ØÒ»¸ö¿Õ×Ö·û´® "" ¡£
- * Á´½Ó£ºhttps://leetcode-cn.com/problems/all-oone-data-structure
+ * è¯·ä½ è®¾è®¡ä¸€ä¸ªç”¨äºå­˜å‚¨å­—ç¬¦ä¸²è®¡æ•°çš„æ•°æ®ç»“æ„ï¼Œå¹¶èƒ½å¤Ÿè¿”å›è®¡æ•°æœ€å°å’Œæœ€å¤§çš„å­—ç¬¦ä¸²ã€‚
+ * å®ç°ä¸€ä¸ªAllOneç±»
+ * AllOne()
+ * inc(String key) å­—ç¬¦ä¸²keyè®¡æ•°+1
+ * dec(String key) å­—ç¬¦ä¸²keyè®¡æ•°-1
+ * getMaxKey() è¿”å›ä»»æ„ä¸€ä¸ªè®¡æ•°æœ€å¤§çš„å­—ç¬¦ä¸²
+ * getMinKey() è¿”å›äººä¸€ä¸ªè®¡æ•°æœ€å°çš„å­—ç¬¦ä¸²
+ * <a href="https://leetcode-cn.com/problems/all-oone-data-structure">https://leetcode-cn.com/problems/all-oone-data-structure</a>
  * @author Dreihunde
  *
  */
-//method1 Ë«ÏòÁ´±í+mapÓ³Éä£¬¼ÇÂ¼countÖµ O(n) O(1)
+//method1 åŒå‘é“¾è¡¨æ’åº+hashmapæ˜ å°„ O(n) O(1)
 class AllOne {
     HashMap<String, Node> map;
-    //µİÔöË«ÏòÁ´±í
+    //
     Node head, tail;
     class Node {
         Node prev;
@@ -114,10 +114,10 @@ class AllOne {
 	}
 }
 
-//method1 Ë«ÏòÁ´±í+mapÓ³Éä£¬ĞèÒªÊ±À©Õ¹count O(n) O(1)
+//method1 Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½+mapÓ³ï¿½ä£¬ï¿½ï¿½ÒªÊ±ï¿½ï¿½Õ¹count O(n) O(1)
 class AllOne2 {
     HashMap<String, Node> map;
-    //µİÔöË«ÏòÁ´±í
+    //ï¿½ï¿½ï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     Node head, tail;
     class Node {
         Node prev;

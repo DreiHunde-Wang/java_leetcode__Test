@@ -15,7 +15,7 @@ public class QuickSortTest {
 	}
 	
 	private void quickSortOrder(int[] nums, int left, int right) {
-		//小区间使用插入排序
+		//С??????ò???????
 		if(right - left <= INSERTION_SORT_THRESHOLD) {
 			InsertSortTest.insertSort(nums);
 			return;
@@ -34,7 +34,7 @@ public class QuickSortTest {
 		int lt = left + 1;
 		int gt = right;
 		
-		// 循环不变量：
+		// ???????????
         // all in [left + 1, lt) <= pivot
         // all in (gt, right] >= pivot
 		while(true) {
@@ -47,7 +47,7 @@ public class QuickSortTest {
 			
 			if(lt >= gt)
 				break;
-			// 细节：相等的元素通过交换，等概率分到数组的两边
+			// ????????????????????????????????????
 			swap(nums, lt, gt);
 			lt++;
 			gt--;
